@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en" ">
+  
+<!-- Mirrored from inebur.com/antler/template/checkout by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:18 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="INEBUR is owner of Antler">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <link type="text/css" href="assets/css/style.css" rel='stylesheet'>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body style="background-color: rgb(210, 210, 210);">
+    
+    <div class="box-container limit-width">
+      <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML *****  -->
+  <header id="header"> </header>
+
+
+  
+
+  <!-- Contenedor del botón -->
+
+
+
+  <!-- ***** BANNER ***** -->
+  <nav class="navbar">
+      
+    <div class="container">
+      
+      <img src="assets/img/logo.png" href="#" width="65">
+  
+      <!-- Búsqueda -->
+      <div class="search-container">
+      
+        <input type="text" id="searchInput" placeholder="🔍 Buscar...">
+      </div>
+  
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html">Productos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+  
+        <!-- 🛒 CARRITO DESKTOP -->
+        <li class="carrito-dropdown">
+          <a href="#" id="iconoCarrito" class="carrito-icono">
+            🛒 <span id="carrito-contador-navbar" class="contador">0</span>
+          </a>
+          <div id="carrito-menu" class="carrito-menu">
+            <div id="lista-carrito-navbar"></div>
+            <div class="total-carrito">
+              Total: <span id="carrito-total-navbar">0.00</span>
+            </div>
+            <a href="cart.html" class="btn btn-default-yellow-fill w-100 mt-2">Realizar compra</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ***** KNOWLEDGEBASE ***** -->
+  <section class="checkout-section  bg-light">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="checkout-wrapper p-5 shadow rounded bg-[#a9a9a9]">
+            <h1 class="text-primary mb-2" style="font-size: 30px;">Realizar compra</h1>
+            <p class="text-muted mb-4">Una vez realizada la compra te llegara una notificacion al WhatsApp y Correo registrados.</p>
+  
+         
+  <br>
+            <form>
+              <h5 class="text-dark mt-4" style="padding: 5px;"><b>Datos de envio</b></h5>
+              <p class="text-muted" style="padding: 10px;">Información personal</p>
+              <div class="row g-3">
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="inputFirstName" name="firstname" placeholder="First Name" required>
+                    <label for="inputFirstName"><i class="fas fa-user-tie me-2"></i>Nombre completo</label>
+                  </div>
+                </div>
+           
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="email" class="form-control" id="inputEmail" name="email" placeholder="Email Address" required>
+                    <label for="inputEmail"><i class="fas fa-envelope me-2"></i>Correo electrónico</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="tel" class="form-control" id="inputPhone" name="phonenumber" placeholder="Phone Number" required>
+                    <label for="inputPhone"><i class="fas fa-phone me-2"></i>Celular</label>
+                  </div>
+                </div>
+              </div>
+  
+              <p class="text-muted mt-5" style="padding: 10px;">Direccion de Envio</p>
+              <div class="row g-3">
+               
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="inputAddress1" name="address1" placeholder="Street Address" required>
+                    <label for="inputAddress1"><i class="far fa-building me-2"></i>Dirección</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-floating">
+                    <input type="text" class="form-control" id="inputAddress2" name="address2" placeholder="Ej: Casa azul, cerca al parque">
+                    <label for="inputAddress2"><i class="fas fa-map-marker-alt me-2"></i>Guía de dirección/Ej: Casa azul, cerca al parque</label>
+                  </div>
+                </div>
+              
+                <div class="col-md-4" >
+                  <div class="form-floating" >
+                    <select class="form-select" id="stateselect" name="state" required>
+                      <option value="" selected disabled> Ciudad</option>
+                      <option>Bogotá</option>
+                      <option>Medellín</option>
+                      <option>Cali</option>
+                      <option>Barranquilla</option>
+                      <option>Cartagena</option>
+                      <option>Cúcuta</option>
+                      <option>Bucaramanga</option>
+                      <option>Pereira</option>
+                      <option>Santa Marta</option>
+                      <option>Ibagué</option>
+                      <option>Manizales</option>
+                      <option>Pasto</option>
+                      <option>Villavicencio</option>
+                      <option>Montería</option>
+                      <option>Neiva</option>
+                      <option>Armenia</option>
+                      <option>Popayán</option>
+                      <option>Sincelejo</option>
+                      <option>Valledupar</option>
+                      <option>Riohacha</option>
+                      <option>Tunja</option>
+                      <option>Florencia</option>
+                      <option>Yopal</option>
+                      <option>Quibdó</option>
+                      <option>Mocoa</option>
+                      <option>San José del Guaviare</option>
+                      <option>Leticia</option>
+                      <option>Mitú</option>
+                      <option>Puerto Carreño</option>
+                      <option>Inírida</option>
+                      <option>San Andrés</option>
+                      <!-- ... more states ... -->
+                    </select>
+                    <label for="stateselect">State</label>
+                  </div>
+                </div>
+                
+                <div class="col-md-4">
+                  <div class="col-md-6">
+                    <div class="form-floating">
+                      <input type="text" class="form-control" id="inputCity" name="city" placeholder="City" required>
+                      <label for="inputCity"><i class="far fa-building me-2"></i>Barrio</label>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+              
+                <!-- 🔽 Esto lo colocas donde quieras que aparezca el botón -->
+<button id="toggleResumen" type="button" class="text-blue-600 font-semibold flex items-center gap-2 mt-6">
+  <i class="fas fa-chevron-down"></i> Resumen del Pedido
+</button>
+
+<div id="resumenPedido" class="mt-4 hidden transition-all duration-500 ease-in-out">
+  <div class="table-responsive-lg">
+    <table class="table">
+      <td><b>Pruducto<b></td>
+        <td><b>Cantidad<b></td>
+          <td><b><b></td>
+            <td><b><b></td>
+              <td><b>Valor total<b></td>
+      <tbody id="order-summary-body">
+        <!-- Aquí se insertan dinámicamente los productos -->
+      </tbody>
+      <tbody>
+        <tr class="seccolor">
+          <td><div class="title-table"><b>Valor total:</b></div></td>
+          <td><b id="totalOrderAmount">$0.00</b></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+
+
+              <div class="text-end mt-5">
+                <button id="btnContinuar" class="w-full bg-primary text-white py-2 rounded-lg hover:bg-primary/90 transition">
+                  Continuar
+                </button>
+              </div>
+              
+ 
+
+              
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Modal de Confirmación -->
+  <div id="modalConfirmacion" class="fixed inset-0 bg-black/50 flex items-center justify-center z-50 hidden">
+    <div id="modalContent" class="relative bg-white rounded-2xl shadow-lg p-6 w-full max-w-md h-auto max-h-[90vh] overflow-y-auto border border-gray-200 transition-all duration-300 ease-in-out">
+  
+      <!-- Botón cerrar -->
+      <button id="btnCerrarModal" class="absolute top-4 right-4 text-gray-500 hover:text-gray-800 transition text-2xl font-bold">&times;</button>
+  
+      <h2 class="text-2xl font-semibold text-center text-gray-900 mb-6">Confirmación de Datos</h2>
+  
+      <div class="space-y-4 text-sm text-gray-800">
+        <!-- Correo -->
+        <div class="border rounded-lg p-3 bg-gray-50">
+          <div class="flex justify-between items-center">
+            <span class="font-medium">Correo:</span>
+            <span id="confCorreo" class="font-semibold"></span>
+          </div>
+        </div>
+  
+        <!-- Dirección -->
+        <div class="border rounded-lg p-3 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-medium">Dirección:</div>
+              <div id="confDireccion" class="text-sm font-semibold mt-1"></div>
+            </div>
+            <button class="btnEditar text-blue-600 text-sm font-semibold hover:underline" data-edit="confDireccion">Cambiar</button>
+          </div>
+        </div>
+        <div class="border rounded-lg p-3 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-medium">Guia direccion:</div>
+              <div id="confGuia" class="text-sm font-semibold mt-1"></div>
+            </div>
+            <button class="btnEditar text-blue-600 text-sm font-semibold hover:underline" data-edit="confGuia">Cambiar</button>
+          </div>
+        </div>
+        <!-- Entrega -->
+        <div class="border rounded-lg p-3 bg-white">
+          <div class="flex justify-between items-start">
+            <div>
+              <div class="font-medium">Pago:</div>
+              <div id="confPago" class="text-sm font-semibold mt-1">Tarjeta/PSE</div>
+              
+            </div>
+          
+          </div>
+        </div>
+  
+        <!-- Teléfono -->
+        <div class="border rounded-lg p-3 bg-gray-50">
+          <div class="flex justify-between">
+            <span class="font-medium">Celular:</span>
+            <span id="confCelular" class="font-semibold"></span>
+          </div>
+        </div>
+  
+        <!-- Ciudad -->
+        <div class="border rounded-lg p-3 bg-gray-50">
+          <div class="flex justify-between">
+            <span class="font-medium">Ciudad:</span>
+            <span id="confCiudad" class="font-semibold"></span>
+          </div>
+        </div>
+  
+        <!-- Barrio -->
+        <div class="border rounded-lg p-3 bg-gray-50">
+          <div class="flex justify-between">
+            <span class="font-medium">Barrio:</span>
+            <span id="confBarrio" class="font-semibold"></span>
+          </div>
+        </div>
+      </div>
+  
+      <div class="mt-6">
+        <button id="btnRealizarCompra" class="w-full py-3 bg-black text-white rounded-xl font-semibold hover:bg-gray-800 transition" style="width: 300px; margin-left: 13%;">
+          <div id="boton-dlocal" style="font-size: 15px; opacity: 0; width: 150px; height: 100px; margin-left: 8%; position: absolute; margin-top: -2%;" ></div>
+          Confirmar y Finalizar
+         
+        </button>
+       
+      </div>
+    </div>
+  </div>
+  
+  
+  
+              
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ***** HELP ***** -->
+  
+    <section class="services help pt-4 pb-80 bg-seccolorstyle">
+      <div class="container">
+        <div class="service-wrap">
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-colorstyle noshadow">
+                <a href="javascript:void(Tawk_API.toggle())" class="help-item">
+                  <div class="img">
+                    <img class="icono"  src="assets/img/whatsapp.png" width="80" height="80" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Chat en vivo</div>
+                    <div class="description seccolor">Tienes alguna duda?, comunicate al <b>WhatsApp</b>.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-colorstyle noshadow">
+                <a href="contact.html" class="help-item">
+                  <div class="img">
+                    <img class="svg ico" src="assets/img/Envio.png" height="65" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Envío Express</div>
+                    <div class="description seccolor"> ¡Recibe tu pedido más rápido en las principales ciudades del país!</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <div class="help-container bg-colorstyle noshadow">
+                <a href="knowledgebase-list.html" class="help-item">
+                  <div class="img">
+                    <img class="svg ico" src="assets/img/seguro.png" height="65" alt="">
+                  </div>
+                  <div class="inform">
+                    <div class="title mergecolor">Pago Seguro</div>
+                    <div class="description seccolor">Compra con tranquilidad, aceptamos pagos en línea confiables.</div>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+   
+
+    <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+  <footer id="footer"> </footer>
+</div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#" class="cd-top" title="Go Top"> <i class="fas fa-angle-up"></i> </a>
+
+
+
+
+
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const btnContinuar = document.getElementById('btnContinuar');
+    const modal = document.getElementById('modalConfirmacion');
+    const btnCerrar = document.getElementById('btnCerrarModal');
+    const formulario = document.querySelector('form'); // 🟡 capturamos el formulario completo
+
+    btnContinuar.addEventListener('click', function (e) {
+      e.preventDefault(); // Previene recarga siempre
+
+      // ✅ Validación manual antes de continuar
+      if (!formulario.checkValidity()) {
+        formulario.reportValidity(); // Muestra los errores del navegador
+        return; // 🔴 Si hay errores, no continúa
+      }
+
+      // ✅ Obtener valores del formulario
+      const correo = document.getElementById('inputEmail').value;
+      const direccion = document.getElementById('inputAddress1').value;
+      const guia = document.getElementById('inputAddress2').value;
+      const celular = document.getElementById('inputPhone').value;
+      const ciudad = document.getElementById('stateselect').value;
+      const barrio = document.getElementById('inputCity').value;
+
+      // ✅ Asignarlos al modal
+      document.getElementById('confCorreo').textContent = correo;
+      document.getElementById('confDireccion').textContent = direccion;
+      document.getElementById('confGuia').textContent = guia || 'Sin guia';
+      document.getElementById('confCelular').textContent = celular;
+      document.getElementById('confCiudad').textContent = ciudad;
+      document.getElementById('confBarrio').textContent = barrio;
+
+      // ✅ Mostrar el modal
+      modal.classList.remove('hidden');
+      const monto = obtenerTotalDesdeHTML();
+if (monto > 0) {
+  // Limpiar el contenedor antes de volver a insertar (opcional para evitar duplicados)
+  const contenedorDLocal = document.getElementById('boton-dlocal');
+  contenedorDLocal.innerHTML = "";
+  crearBotonDLocal(monto);
+}
+    });
+
+    // 🔴 Cerrar modal al dar clic en botón cerrar
+    btnCerrar.addEventListener('click', function () {
+      modal.classList.add('hidden');
+    });
+  });
+</script>
+
+
+
+
+<script>
+  // Mostrar u ocultar el resumen
+  document.getElementById('toggleResumen').addEventListener('click', function () {
+    const resumen = document.getElementById('resumenPedido');
+    resumen.classList.toggle('hidden');
+  });
+
+  // Formatear número en formato moneda COP
+  function formatearCOP(valor) {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      minimumFractionDigits: 3,
+      maximumFractionDigits: 3
+    }).format(valor);
+  }
+
+  // Renderizar resumen del pedido
+  function renderOrderSummary() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const tbody = document.getElementById("order-summary-body");
+    const totalEl = document.getElementById("totalOrderAmount");
+    tbody.innerHTML = "";
+
+    let totalGeneral = 0;
+    let cantidadTotal = 0;
+
+    carrito.forEach(producto => {
+      const cantidad = Number(producto.cantidad);
+      const precio = Number(producto.precio);
+      const descuento = Number(producto.descuento) || 0;
+
+      const precioConDescuento = precio * (1 - descuento / 100);
+      const totalProducto = precioConDescuento * cantidad;
+      totalGeneral += totalProducto;
+      cantidadTotal += cantidad;
+
+      const row = document.createElement("tr");
+      row.innerHTML = `
+        <td>${producto.descripcion || producto.nombre}</td>
+        <td>${cantidad}</td>
+        <td></td>
+        <td>${descuento > 0 ? descuento + '%' : ''}</td>
+        <td>${formatearCOP(totalProducto)}</td>
+      `;
+      tbody.appendChild(row);
+    });
+
+    // Fila de envío
+    const filaEnvio = document.createElement("tr");
+    filaEnvio.innerHTML = `
+      <td colspan="4">Envío</td>
+      <td><b>Gratis</b></td>
+    `;
+    tbody.appendChild(filaEnvio);
+
+    // Descuento general
+    if (cantidadTotal > 2) {
+      const descuento = totalGeneral * 0.10;
+
+      const subtotalRow = document.createElement("tr");
+      subtotalRow.innerHTML = `
+        <td colspan="4">Subtotal sin descuento</td>
+        <td>${formatearCOP(totalGeneral)}</td>
+      `;
+      tbody.appendChild(subtotalRow);
+
+      const descuentoRow = document.createElement("tr");
+      descuentoRow.innerHTML = `
+        <td colspan="4">Descuento por cantidad 10%</td>
+        <td>- ${formatearCOP(descuento)}</td>
+      `;
+      tbody.appendChild(descuentoRow);
+
+      totalGeneral -= descuento;
+    }
+
+    totalEl.textContent = formatearCOP(totalGeneral);
+    localStorage.setItem('montoPago', Math.round(totalGeneral));
+  }
+
+  // Obtener el monto como número limpio desde el HTML
+  function obtenerTotalDesdeHTML() {
+    const totalTexto = document.getElementById("totalOrderAmount").innerText;
+    const totalLimpio = totalTexto.replace('$', '').replace(/,/g, '').trim();
+    const numero = parseFloat(totalLimpio);
+    return isNaN(numero) || numero <= 0 ? 0 : Math.round(numero);
+  }
+
+  // Crear botón de pago DLocal
+  function crearBotonDLocal(monto) {
+    const scriptExistente = document.querySelector('script[src="https://static.dlocalgo.com/dlocalgo.min.js"]');
+
+    function inicializarBoton() {
+      const containerId = "dp-btn-9a4e09ea-379a-45c9-8233-0f518a7c8ad9";
+      const container = document.createElement("div");
+      container.id = containerId;
+
+      document.getElementById("boton-dlocal").appendChild(container);
+
+      new DlocalGo("GcDKCzlOsxaBqFsCCMKskyUOmhhoLGIe").createCheckout(containerId, {
+        subType: "BUTTON",
+        country: "CO",
+        currency: "COP",
+        amount: monto,
+        lang: "es",
+        text: "______________Pagar_____________"
+      });
+    }
+
+    if (window.DlocalGo) {
+      inicializarBoton();
+    } else {
+      const script = document.createElement("script");
+      script.src = "https://static.dlocalgo.com/dlocalgo.min.js";
+      script.async = true;
+      script.onload = inicializarBoton;
+      document.body.appendChild(script);
+    }
+  }
+
+  // Al cargar la página
+  window.addEventListener('DOMContentLoaded', () => {
+    renderOrderSummary();
+    const monto = obtenerTotalDesdeHTML();
+    if (monto > 0) {
+      crearBotonDLocal(monto);
+    }
+  });
+</script>
+
+  
+
+<script>
+  // Función para activar edición en un campo
+  function habilitarEdicion(idSpan) {
+    const span = document.getElementById(idSpan);
+    const valorActual = span.textContent;
+
+    // Crear input
+    const input = document.createElement("input");
+    input.type = "text";
+    input.value = valorActual;
+    input.className = "border border-gray-300 rounded px-2 py-1 text-sm w-full mt-1";
+    input.placeholder = "Editar...";
+
+    // Reemplazar span por input
+    span.replaceWith(input);
+    input.focus();
+
+    // Guardar cambios
+    function guardar() {
+      const nuevoValor = input.value.trim() || valorActual;
+      const nuevoSpan = document.createElement("span");
+      nuevoSpan.id = idSpan;
+      nuevoSpan.textContent = nuevoValor;
+      nuevoSpan.className = "font-semibold";
+      input.replaceWith(nuevoSpan);
+    }
+
+    input.addEventListener("blur", guardar);
+    input.addEventListener("keypress", function (e) {
+      if (e.key === "Enter") guardar();
+    });
+  }
+
+  // Asignar evento a cada botón
+  document.querySelectorAll(".btnEditar").forEach(btn => {
+    btn.addEventListener("click", function () {
+      const campo = this.dataset.edit;
+      habilitarEdicion(campo);
+    });
+  });
+</script>
+
+<script>
+  document.getElementById("boton-dlocal").addEventListener("click", function () {
+    const correo = document.getElementById("confCorreo").textContent.trim();
+    const direccion = document.getElementById("confDireccion").textContent.trim();
+    const guia = document.getElementById("confGuia").textContent.trim();
+    const pago = document.getElementById("confPago").textContent.trim();
+    const celular = document.getElementById("confCelular").textContent.trim();
+    const ciudad = document.getElementById("confCiudad").textContent.trim();
+    const barrio = document.getElementById("confBarrio").textContent.trim();
+  
+    // Capturar HTML de los productos
+    const productosHTML = document.getElementById("order-summary-body").innerHTML;
+    const totalPedido = document.getElementById("totalOrderAmount").textContent.trim();
+  
+    fetch("send.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        correo,
+        direccion,
+        guia,
+        pago,
+        celular,
+        ciudad,
+        barrio,
+        productos: productosHTML,
+        total: totalPedido
+      }),
+    })
+
+  });
+  </script>
+  
+  <script>
+    const menuToggle = document.querySelector(".menu-toggle");
+    const navLinks = document.getElementById("navLinks");
+    const navbar = document.querySelector(".navbar");
+  
+    // Alternar menú
+    function toggleMenu() {
+      navLinks.classList.toggle("active");
+    }
+  
+    // Cerrar menú si haces clic fuera
+    document.addEventListener("click", (e) => {
+      const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+      if (!isClickInside && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+      }
+    });
+  
+    // Scroll: ocultar navbar hacia abajo, mostrar hacia arriba
+    let lastScrollTop = window.scrollY;
+  
+    window.addEventListener("scroll", () => {
+      const currentScroll = window.scrollY;
+      const scrollingDown = currentScroll > lastScrollTop;
+  
+      // Oculta el menú si está abierto
+      if (scrollingDown && navLinks.classList.contains("active")) {
+        navLinks.classList.remove("active");
+      }
+  
+      // Efecto moderno: navbar se oculta al bajar, aparece al subir
+      if (scrollingDown) {
+        navbar.classList.remove("scroll-show");
+        navbar.classList.add("scroll-hide");
+      } else {
+        navbar.classList.remove("scroll-hide");
+        navbar.classList.add("scroll-show");
+      }
+  
+      lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevenir valores negativos
+    });
+  </script>
+
+
+
+
+
+
+</body>
+
+<!-- Mirrored from inebur.com/antler/template/checkout by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:18 GMT -->
+</html>

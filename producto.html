@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from inebur.com/antler/template/dedicated by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:13 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="INEBUR is owner of Antler">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/style.css" rel='stylesheet'>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixitup.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixitup.multifilter.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/mixevents.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/filter.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body >
+  <div class="box-container limit-width">
+    <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML *****  -->
+  
+  
+
+
+
+
+
+    <div class="box-container limit-width">
+      <!-- ***** SETTINGS ****** -->
+      <section id="settings"></section>
+      <!-- ***** LOADING PAGE ****** -->
+
+      <!-- ***** FRAME MODE ****** -->
+      <div class="body-borders" data-border="20">
+          <div class="top-border bg-white"></div>
+          <div class="right-border bg-white"></div>
+          <div class="bottom-border bg-white"></div>
+          <div class="left-border bg-white"></div>
+      </div>
+      <!-- ***** UPLOADED MENU FROM HEADER.HTML ***** -->
+     
+    <!-- ***** BANNER ***** -->
+     
+    <nav class="navbar">
+      
+      <div class="container">
+        
+        <img src="assets/img/logo.png" href="#" width="65">
+    
+        <!-- Búsqueda -->
+        <div class="search-container">
+        
+          <input type="text" id="searchInput" placeholder="🔍 Buscar...">
+        </div>
+    
+        <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+    
+        <ul class="nav-links" id="navLinks">
+          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="#features">Productos</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="#contact">Contact</a></li>
+    
+          <!-- 🛒 CARRITO DESKTOP -->
+          <li class="carrito-dropdown">
+            <a href="#" id="iconoCarrito" class="carrito-icono">
+              🛒 <span id="carrito-contador-navbar" class="contador">0</span>
+            </a>
+            <div id="carrito-menu" class="carrito-menu">
+              <div id="lista-carrito-navbar"></div>
+              <div class="total-carrito">
+                Total: <span id="carrito-total-navbar">0.00</span>
+              </div>
+              <a href="cart.html" class="btn btn-default-yellow-fill w-100 mt-2">Realizar compra</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+    <!-- 🛒 FAB flotante para móviles -->
+<div class="fab-carrito" onclick="toggleCarritoFlotante()">
+  🛒 <span id="carrito-contador-fab" class="fab-contador">0</span>
+</div>
+
+<div id="carrito-menu-flotante" class="carrito-menu-flotante">
+  <div id="lista-carrito-flotante"></div>
+  <div class="total-carrito">
+    Total: <span id="carrito-total-flotante">0.00</span>
+  </div>
+  <a href="cart.html" class="btn btn-default-yellow-fill w-100 mt-2">Realizar compra</a>
+</div>
+<br>
+     <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+        margin: 0;
+        padding: 0;
+        background: #fff;
+        color: #000;
+      }
+  
+      header {
+        text-align: center;
+        font-size: 26px;
+        font-weight: bold;
+        padding: 20px 0;
+        border-bottom: 1px solid #ddd;
+        background-color: #f8f8f8;
+      }
+  
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 40px 20px;
+        max-width: 1200px;
+        margin: auto;
+        gap: 40px;
+      }
+  
+      .left {
+        flex: 1 1 100%;
+        max-width: 100%;
+      }
+  
+      .carousel {
+        position: relative;
+        overflow: hidden;
+        width: 100%;
+        border-radius: 12px;
+      }
+  
+      .carousel img {
+        width: 100%;
+        display: none;
+        transition: opacity 0.5s ease-in-out;
+      }
+  
+      .carousel img.active {
+        display: block;
+      }
+  
+      .right {
+        flex: 1 1 100%;
+      }
+  
+      .small-orange {
+        color: orange;
+        font-weight: 500;
+        font-size: 14px;
+      }
+  
+      .title {
+        font-size: 32px;
+        font-weight: bold;
+        margin: 10px 0 20px;
+      }
+  
+      .model-option {
+        border: 2px solid #ccc;
+        border-radius: 12px;
+        padding: 16px 20px;
+        margin-bottom: 20px;
+        cursor: pointer;
+        transition: border 0.3s ease;
+      }
+  
+      .model-option.selected {
+        border-color: #0071e3;
+        background: #f5faff;
+      }
+  
+      .price {
+        margin-top: 8px;
+        font-size: 16px;
+      }
+  
+      .price .actual {
+        color: #0071e3;
+        font-size: 22px;
+        font-weight: bold;
+      }
+  
+      .price .old {
+        text-decoration: line-through;
+        color: #999;
+        margin-left: 10px;
+      }
+  
+      .price .discount {
+        background: #ff0000;
+        color: white;
+        font-size: 12px;
+        padding: 2px 6px;
+        border-radius: 4px;
+        margin-left: 10px;
+      }
+  
+      .personalization {
+        border: 1px solid #ddd;
+        padding: 20px;
+        border-radius: 12px;
+        margin-bottom: 40px;
+      }
+  
+      .personalization h3 {
+        margin: 0 0 10px;
+      }
+  
+      .countdown {
+        font-size: 18px;
+        margin: 20px 0;
+        color: #e60000;
+        font-weight: bold;
+        background: #fff4f4;
+        padding: 10px 20px;
+        border: 2px dashed #e60000;
+        border-radius: 10px;
+        text-align: center;
+      }
+  
+      .btn {
+        display: inline-block;
+        background: #0071e3;
+        color: white;
+        padding: 12px 20px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        margin-right: 10px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+      }
+  
+      .btn:hover {
+        background: #005bb5;
+        color: white;
+      }
+  
+      @media (min-width: 768px) {
+        .container {
+          flex-wrap: nowrap;
+        }
+     
+  
+        .left, .right {
+          flex: 1;
+          max-width: 50%;
+        }
+      }
+
+      .benefits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 30px 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+}
+
+.benefits div {
+  width: 100%;
+  max-width: 400px;
+  text-align: center;
+  padding: 10px;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #333;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.3s;
+}
+
+.benefits div:hover {
+  transform: translateY(-5px);
+}
+
+.benefits span {
+  display: block;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+/* Estilo para pantallas más grandes (desktop) */
+@media (min-width: 768px) {
+  .benefits {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+  }
+
+  .benefits div {
+    max-width: 300px;
+  }
+}
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  .benefits {
+    flex-direction: row;
+    justify-content: center;
+    padding: 40px;
+  }
+  .carousel-wrapper {
+  position: relative;
+  width: 50%;
+  text-align: center;
+}
+  .benefits div {
+    max-width: 300px;
+  }
+}
+
+.carousel {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+
+.img-producto{
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .img-producto{
+    width: 40%;
+  }
+}
+.carousel img {
+  width:100%;
+  display: none;
+  border-radius: 12px;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel img.active {
+  display: block;
+}
+
+.carousel-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-arrow:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.carousel-arrow.left {
+  left: 10px;
+}
+
+.carousel-arrow.right {
+  right: 10px;
+}
+
+.carousel-thumbnails {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 10px;
+}
+
+.carousel-thumbnails .thumb {
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+  object-fit: cover;
+  opacity: 0.6;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.carousel-thumbnails .thumb:hover {
+  opacity: 1;
+  transform: scale(1.05);
+}
+
+.carousel-thumbnails .thumb.active {
+  opacity: 1;
+  border-color: #0071e3;
+}
+/* ANIMACIONES */
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* CARACTERÍSTICAS */
+.features-section {
+  background: #f1faff;
+  padding: 40px 20px;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.features-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #0071e3;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  max-width: 500px;
+  text-align: left;
+}
+
+.features-list li {
+  font-size: 18px;
+  margin: 10px 0;
+  padding-left: 1.2em;
+  position: relative;
+  animation: fadeInUp 1s ease forwards;
+}
+
+/* COMENTARIOS */
+.reviews-section {
+  padding: 40px 20px;
+  background: #fff;
+  text-align: center;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.reviews-section h2 {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.review {
+  background: #f9f9f9;
+  padding: 20px;
+  margin: 10px auto;
+  max-width: 500px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  animation: fadeInUp 1s ease forwards;
+}
+/* ESTRUCTURA GENERAL DEL NAVBAR */
+
+
+
+    </style>
+  </head>
+  <body>
+  
+    <header>AirPods 4</header>
+  
+    <div class="container">
+      <div class="carousel-wrapper">
+        <div class="carousel">
+          <button class="carousel-arrow left" onclick="cambiarImagen(-1)">‹</button>
+          <img src="assets/img/airpods.jpg" class="active" alt="AirPods View 1">
+          <img src="assets/img/carga1.png" alt="AirPods View 2">
+          <img src="assets/img/carga2.png" onclick="mostrarImagen(1)" class="thumb">
+          <img src="assets/img/funda.webp" alt="AirPods View 3">
+          <button class="carousel-arrow right" onclick="cambiarImagen(1)">›</button>
+        </div>
+      
+        <div class="carousel-thumbnails">
+          <img src="assets/img/airpods.jpg" onclick="mostrarImagen(0)" class="thumb active">
+          <img src="assets/img/carga1.png" onclick="mostrarImagen(1)" class="thumb">
+          <img src="assets/img/carga2.png" onclick="mostrarImagen(1)" class="thumb">
+          <img src="assets/img/funda.webp" onclick="mostrarImagen(2)" class="thumb">
+        </div>
+        
+      </div>
+  
+      <div class="right">
+        <div class="small-orange">Envio Gratis</div>
+        <div class="title">Compra AirPods 4</div>
+  
+        <div class="countdown">
+          Oferta termina en: <span id="timer">00:00:00</span>
+        </div>
+  
+        <div class="model-option selected" onclick="selectModel(this)">
+          <strong>AirPods 4 ANC Unidad</strong>
+          <div class="price">
+            <span class="actual">$89.999</span>
+            <span class="old">$150.000</span>
+            <span class="discount">-40%</span>
+          </div>
+        </div>
+
+  
+        <a class="btn btn-default-yellow-fill btn-carrito"
+          data-id="teclado" data-nombre="Airpods Pro 2" data-precio="89.999"
+          onclick="agregarAlCarrito(this)">
+          Agregar 🛒
+        </a>
+        <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+        data-id="teclado" data-nombre="Airpods Pro 2" data-precio="89.999"
+        onclick="agregarAlCarrito(this)">Comprar</a>
+  <br>
+  <br>
+        <div class="personalization">
+          <h4>Gratis una funda para tus AirPods Pro 2</h4>
+          <p>Por la compra de los AirPods Pro 2, lleva gratis un case para estos</p>
+          <strong style="float: right;">Gratis</strong>
+          <br>
+        </div>
+      </div>
+    </div>
+
+
+  
+
+  
+    <section class="features-section">
+      <h2>Características principales</h2>
+      <ul class="features-list">
+        <li>🔊 Sonido envolvente de alta calidad</li>
+        <li>🔋 Hasta 24 horas de batería con estuche</li>
+        <li>🎤 Micrófono con cancelación de ruido</li>
+        <li>📶 Conexión automática con tus dispositivos</li>
+        <li>💧 Resistencia al agua y sudor</li>
+      </ul>
+      <img src="assets/img/GARANTIA.webp"  class="img-producto">
+    </section>
+
+    <div class="benefits">
+      <div>
+        <span>🚚</span>
+        <strong> ¡Recíbelo el mismo día!</strong>
+        Disfruta de envío gratuito en todo el país, con entregas express el mismo día en ciudades principales.
+      </div>
+      <div>
+        <span>🤝</span>
+         <strong> ¡Estamos para ayudarte!</strong>
+Cualquier duda, inquietud o solicitud de garantía será atendida de inmediato por nuestro equipo.
+      </div>
+      <div>
+        <span>💳</span>
+        <strong> Paga como prefieras</strong>
+Compra de forma segura online o paga contra entrega al recibir tu producto. ¡Tú decides!
+      </div>
+    </div>
+    
+    <!-- SECCIÓN DE COMENTARIOS -->
+    <section class="reviews-section">
+      <h2>Opiniones de clientes</h2>
+      <div class="review">
+        <p><strong>⭐️⭐️⭐️⭐️⭐️ Carla M.</strong></p>
+        <p>Me encantaron, la batería dura mucho y el sonido es increíble. Muy recomendados!</p>
+      </div>
+      <div class="review">
+        <p><strong>⭐️⭐️⭐️⭐️ Pedro R.</strong></p>
+        <p>Son muy cómodos y la calidad del audio es excelente. Los uso todos los días.</p>
+      </div>
+      <div class="review">
+        <p><strong>⭐️⭐️⭐️⭐️⭐️ Lucía G.</strong></p>
+        <p>Superaron mis expectativas, llegaron rápido y funcionan perfecto.</p>
+      </div>
+    </section>    
+
+
+    <section class="contact-section">
+      <header>
+        <h2>Contáctanos</h2>
+      </header>
+      <div class="container">
+        <div class="contact-info">
+          <div class="info-item">
+            <h3>Dirección</h3>
+            <p>123 Calle Ficticia, Ciudad, País</p>
+          </div>
+    
+          <div class="info-item">
+            <h3>Correo Electrónico</h3>
+            <p><a href="mailto:info@empresa.com">info@empresa.com</a></p>
+          </div>
+    
+          <div class="info-item">
+            <h3>Teléfono</h3>
+            <p>(+1) 234-567-890</p>
+          </div>
+        </div>
+    
+        <div class="social-links">
+          <h3>Síguenos</h3>
+          <ul>
+            <li><a href="https://facebook.com/empresa" target="_blank">Facebook</a></li>
+            <li><a href="https://twitter.com/empresa" target="_blank">Twitter</a></li>
+            <li><a href="https://instagram.com/empresa" target="_blank">Instagram</a></li>
+            <li><a href="https://linkedin.com/company/empresa" target="_blank">LinkedIn</a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+ 
+    <!-- ***** HELP ***** -->
+  
+    <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+    <footer id="footer"> </footer>
+  </div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#" class="cd-top" title="Go Top"> <i class="fas fa-angle-up"></i> </a>
+<script>
+  function toggleMenu() {
+    var navLinks = document.getElementById("navLinks");
+    navLinks.classList.toggle("active");
+  }
+</script>
+
+<script>
+  // ✅ Formatear valores en pesos colombianos
+  const formatearCOP = valor => {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      minimumFractionDigits: 3
+    }).format(valor);
+  };
+
+  function agregarAlCarrito(elemento) {
+    const id = elemento.getAttribute('data-id');
+    const nombre = elemento.getAttribute('data-nombre');
+    const precio = parseFloat(elemento.getAttribute('data-precio')); // ✅ Que sea un número entero (ej: 99000)
+
+    let carrito = Array.isArray(JSON.parse(localStorage.getItem('carrito')))
+      ? JSON.parse(localStorage.getItem('carrito'))
+      : [];
+
+    const productoExistente = carrito.find(p => p.id === id);
+
+    if (productoExistente) {
+      productoExistente.cantidad += 1;
+    } else {
+      carrito.push({
+        id,
+        nombre,
+        precio,
+        cantidad: 1,
+        precioOriginal: Math.round(precio * 1.4),
+        descuento: "Ahorra 40%"
+      });
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    actualizarIconoCarrito();
+    renderCarritoDropdown();
+  }
+
+  function actualizarIconoCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const totalCantidad = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+
+    const contadorNavbar = document.getElementById('carrito-contador-navbar');
+    const contadorFAB = document.getElementById('carrito-contador-fab');
+
+    if (contadorNavbar) contadorNavbar.textContent = totalCantidad;
+    if (contadorFAB) contadorFAB.textContent = totalCantidad;
+  }
+
+  function renderCarritoDropdown() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+    const contenedores = [
+      document.getElementById('lista-carrito-navbar'),
+      document.getElementById('lista-carrito-flotante')
+    ];
+
+    const totalElementos = [
+      document.getElementById('carrito-total-navbar'),
+      document.getElementById('carrito-total-flotante')
+    ];
+
+    let total = 0;
+
+    contenedores.forEach(contenedor => {
+      if (contenedor) contenedor.innerHTML = '';
+    });
+
+    carrito.forEach((prod, i) => {
+      const subtotal = prod.precio * prod.cantidad;
+      total += subtotal;
+
+      const itemHTML = `
+        <div class="carrito-item">
+          <div>
+            <div><strong>${prod.nombre}</strong></div>
+            <div>${formatearCOP(prod.precio)} x ${prod.cantidad} = <strong>${formatearCOP(subtotal)}</strong></div>
+          </div>
+          <div class="acciones">
+            <button onclick="modificarCantidad(${i}, 1)">+</button>
+            <button onclick="modificarCantidad(${i}, -1)">-</button>
+            <button onclick="eliminarProducto(${i})">❌</button>
+          </div>
+        </div>
+      `;
+
+      contenedores.forEach(contenedor => {
+        if (contenedor) contenedor.innerHTML += itemHTML;
+      });
+    });
+
+    totalElementos.forEach(totalEl => {
+      if (totalEl) totalEl.textContent = formatearCOP(total);
+    });
+
+    actualizarIconoCarrito();
+  }
+
+  function modificarCantidad(index, cambio) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito[index].cantidad += cambio;
+
+    if (carrito[index].cantidad <= 0) {
+      carrito.splice(index, 1);
+    }
+
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    renderCarritoDropdown();
+  }
+
+  function eliminarProducto(index) {
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    carrito.splice(index, 1);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    renderCarritoDropdown();
+  }
+
+  function toggleCarritoFlotante() {
+    const menu = document.getElementById('carrito-menu-flotante');
+    if (!menu) return;
+
+    menu.style.display = (menu.style.display === 'block') ? 'none' : 'block';
+  }
+
+  // Cierra el carrito flotante si se hace clic fuera
+  document.addEventListener('click', function (event) {
+    const menu = document.getElementById('carrito-menu-flotante');
+    const fab = document.querySelector('.fab-carrito');
+    if (!menu || !fab) return;
+
+    if (!menu.contains(event.target) && !fab.contains(event.target)) {
+      menu.style.display = 'none';
+    }
+  });
+
+  function realizarCompra() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    if (carrito.length === 0) {
+      alert("El carrito está vacío.");
+      return;
+    }
+
+    // Redirige a la página de compra
+    window.location.href = 'cart.html';
+  }
+
+  document.addEventListener('DOMContentLoaded', () => {
+  actualizarIconoCarrito();
+  renderCarritoDropdown();
+
+  // Ocultar el menú flotante del carrito al inicio
+  const menuFlotante = document.getElementById('carrito-menu-flotante');
+  if (menuFlotante) {
+    menuFlotante.style.display = 'none';
+  }
+});
+</script>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+  const navbar = document.querySelector(".navbar");
+
+  // Alternar menú
+  function toggleMenu() {
+    navLinks.classList.toggle("active");
+  }
+
+  // Cerrar menú si haces clic fuera
+  document.addEventListener("click", (e) => {
+    const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+    if (!isClickInside && navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+  });
+
+  // Scroll: ocultar navbar hacia abajo, mostrar hacia arriba
+  let lastScrollTop = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const scrollingDown = currentScroll > lastScrollTop;
+
+    // Oculta el menú si está abierto
+    if (scrollingDown && navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+
+    // Efecto moderno: navbar se oculta al bajar, aparece al subir
+    if (scrollingDown) {
+      navbar.classList.remove("scroll-show");
+      navbar.classList.add("scroll-hide");
+    } else {
+      navbar.classList.remove("scroll-hide");
+      navbar.classList.add("scroll-show");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevenir valores negativos
+  });
+</script>
+<script>
+  function scrollProducts(direction) {
+    const container = document.getElementById('productScroll');
+    const scrollAmount = 300;
+    container.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+</script>
+
+<script>
+  const video = document.querySelector('.custom-video');
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          video.play();
+        } else {
+          video.pause();
+          video.currentTime = 0;
+        }
+      });
+    },
+    {
+      threshold: 0.5 // Se reproduce cuando al menos el 50% es visible
+    }
+  );
+
+  observer.observe(video);
+</script>
+  
+<script>
+  // Cambiar selección de modelo
+  function selectModel(element) {
+    document.querySelectorAll('.model-option').forEach(el => el.classList.remove('selected'));
+    element.classList.add('selected');
+  }
+
+  function startCountdown(duration, display) {
+  // Verificamos si ya existe un tiempo de finalización en localStorage
+  let endTime = localStorage.getItem('endTime');
+
+  if (!endTime) {
+    // Si no existe, lo calculamos y lo guardamos
+    const now = Math.floor(Date.now() / 1000); // en segundos
+    endTime = now + duration;
+    localStorage.setItem('endTime', endTime);
+  } else {
+    endTime = parseInt(endTime);
+  }
+
+  const countdown = setInterval(function () {
+    const now = Math.floor(Date.now() / 1000); // en segundos
+    let timer = endTime - now;
+
+    if (timer < 0) {
+      clearInterval(countdown);
+      display.textContent = "Oferta finalizada";
+      return;
+    }
+
+    const hours = String(Math.floor(timer / 3600)).padStart(2, '0');
+    const minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
+    const seconds = String(timer % 60).padStart(2, '0');
+
+    display.textContent = `${hours}:${minutes}:${seconds}`;
+  }, 1000);
+}
+
+  window.onload = function () {
+    const threeHours = 3 * 60 * 60;
+    const display = document.getElementById('timer');
+    startCountdown(threeHours, display);
+  };
+</script>
+<script>
+  const images = document.querySelectorAll('.carousel img');
+  const thumbs = document.querySelectorAll('.carousel-thumbnails .thumb');
+  let index = 0;
+
+  function mostrarImagen(i) {
+    images.forEach(img => img.classList.remove('active'));
+    thumbs.forEach(thumb => thumb.classList.remove('active'));
+    images[i].classList.add('active');
+    thumbs[i].classList.add('active');
+    index = i;
+  }
+
+  function cambiarImagen(dir) {
+    index += dir;
+    if (index < 0) index = images.length - 1;
+    if (index >= images.length) index = 0;
+    mostrarImagen(index);
+  }
+
+  // Puedes dejar el automático si lo deseas
+  setInterval(() => cambiarImagen(1), 6000);
+</script>
+
+</body>
+
+<!-- Mirrored from inebur.com/antler/template/dedicated by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:14 GMT -->
+</html>

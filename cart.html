@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from inebur.com/antler/template/cart by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:12 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="INEBUR is owner of Antler">
+    <link href="assets/img/favicon.ico" rel="shortcut icon">
+    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <!-- Font Style -->
+    <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
+    <!-- RTL Style -->
+    <link type="text/css" href="assets/css/rtl/bootstrap-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <link type="text/css" href="assets/css/rtl/theme-rtl.min.css" rel='stylesheet' class="rtl" disabled>
+    <!-- CSS Style -->
+    <link type="text/css" href="assets/css/bootstrap.min.css" rel='stylesheet' class="ltr">
+    <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
+    <link type="text/css" href="assets/css/style.css" rel='stylesheet'>
+    <!-- Javascript -->
+    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
+    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+  </head>
+  <body >
+    <div class="box-container limit-width">
+
+   
+      <!-- ***** SETTINGS ****** -->
+    <section id="settings"> </section>
+    <!-- ***** LOADING PAGE ****** -->
+    <div id="spinner-area">
+      <div class="spinner">
+        <div class="double-bounce1"></div>
+        <div class="double-bounce2"></div>
+        <div class="spinner-txt">Antler...</div>
+      </div>
+    </div>
+    <!-- ***** FRAME MODE ****** -->
+    <div class="body-borders" data-border="20">
+      <div class="top-border bg-white"></div>
+      <div class="right-border bg-white"></div>
+      <div class="bottom-border bg-white"></div>
+      <div class="left-border bg-white"></div>
+    </div>
+    <!-- ***** UPLOADED MENU FROM HEADER.HTML ***** -->
+  <header id="header"> </header>
+  <!-- ***** BANNER ***** -->
+  <nav class="navbar">
+      
+    <div class="container">
+      
+      <img src="assets/img/logo.png" href="#" width="65">
+  
+      <!-- Búsqueda -->
+      <div class="search-container">
+      
+        <input type="text" id="searchInput" placeholder="🔍 Buscar..."onkeydown="buscarConEnter(event)">
+      </div>
+  
+      <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="producto.html">Productos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+  
+        <!-- 🛒 CARRITO DESKTOP -->
+   
+      </ul>
+    </div>
+  </nav>
+     <!-- BANNER -->
+
+  <div class="top-header overlay">
+    <div class="lazyload">
+      <!--<img src="./assets/img/topbanner04.jpg" class="img-defaultbanner" alt="Background image">-->
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12 col-md-12">
+          <div class="wrapper">
+            <h1 class="heading">Cart</h1>
+            <div class="subheading mb-0">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** KNOWLEDGEBASE ***** -->
+  <section class="config cd-main-content pb-80 blog sec-bg2 motpath notoppadding bg-seccolorstyle">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12 col-lg-8 pt-80">
+          <div id="sidebar_content" class="wrap-blog">
+            <div class="row">
+              <div class="col-md-12 col-lg-12">
+                <div class="wrapper targetDiv sec-grad-white-to-green noshadow bg-colorstyle">
+                  <h1 class="mergecolor" style="color: rgb(4, 108, 255);">Resumen pedido</h1>
+                  <p class="mergecolor">Todos nuestros productos cuentan con un <b>10% de descuento</b> adicional despues de 2 unidades.</p>
+                  <div class="row">
+                    <div class="col-md-12 pt-4">
+                      <div class="table-responsive-lg">
+                        <table class="table compare">
+                          <thead>
+                            <tr>
+                              <th>Descripción</th>
+                              <th>Cantidad</th>
+                              <th>Precio Unitario</th>
+                              <th>Total</th>
+                              <th>Acciones</th>
+                            </tr>
+                          </thead>
+                          <tbody id="cart-body">
+                            <!-- Aquí se agregan dinámicamente los productos -->
+                          </tbody>
+                          
+                          <tfoot>
+                            <tr>
+                              <td colspan="3" class="text-end"><strong>Total:</strong></td>
+                              <td colspan="2" id="cart-total" class="c-green fw-bold">$0.00</td>
+                            </tr>
+                          </tfoot>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="col-md-12 pt-4">
+                      <div class="cd-filter-block">
+                        <div class="seccolor h5">Metodos de pago</div>
+                        <div class="radio-group radios-filter cd-filter-content list w-100">
+                          <div class="table-responsive-sm">
+                            <table class="table compare min">
+                              <tbody>
+                                <tr>
+                                  <td><div class="badge bg-purple me-1">Selecciona</div><span class="seccolor"> Metodos de pago</span></td>
+                                  <td>
+                                    <div class="cd-select">
+                                      <select id="metodoPago" class="select-filter seccolor" required>
+                                        <option value="">Selecciona métodos de pago</option>
+                                        <option value="tarjeta">Paga con Tarjeta</option>
+                                        <option value="pse">Paga con PSE</option>
+                                        <option value="contraentrega">Pago Contraentrega</option>
+                                      </select>
+                                    </div>
+                                  </td>
+                                </tr>
+                                <tr>
+                                  <td><div class="badge bg-grey me-1">Promo</div> <span class="seccolor">Promocode</span></td>
+                                  <td>
+                                    <input type="text" name="promocode" aria-label="Promocode" placeholder="Put your promocode here" required>
+                                  </td>
+                                </tr>
+                                <tr>
+                               
+                              
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                
+            
+                </div>
+                
+              </div>
+              
+            </div>
+            
+          </div>
+          
+        </div>
+        
+        <!-- sidebar -->
+      
+
+         
+          <div class="col-md-12 col-lg-4" id="tabla" >
+            <aside id="sidebar" class="mt-80 sidebar sec-bg1 bg-colorstyle noshadow" >
+              <div class="ordersummary mt-0 mb-5" >
+                <div class="mergecolor h4" style="color: rgb(4, 108, 255);">Resumen del pedido</div>
+                <div class="table-responsive-lg" >
+                  <table class="table" >
+                    <td><b>Pruducto<b></td>
+                      <td><b>Cantidad<b></td>
+                        <td><b><b></td>
+                          <td><b><b></td>
+                            
+                        <td><div class="title-table" ><b>Valor total<b></div></td>
+                        
+                    <tbody id="order-summary-body">
+                      <!-- Aquí se insertan dinámicamente los productos -->
+                     
+                    </tbody>
+                    
+                    <tbody>
+                      <td><div class="title-table" ><b>Total a pagar: <b></div></td>
+                      <td><b id="totalOrderAmount">$0.00</b></td>
+                       
+                      
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+              <a href="checkout.html" class="btn btn-default-yellow-fill mb-3"id="btnContinuar" >Continuar <i class="fas fa-arrow-alt-circle-right"></i></a>&nbsp;&nbsp;
+              <a href="index.html" class="btn btn-default-fill mb-3">Seguir comprando</a>
+            </aside>
+          
+
+          
+          </div>
+      </div>
+    </div>
+    
+
+ 
+  </section>
+  <!-- ***** HELP ***** -->
+  <section class="services help pt-4 pb-80 bg-seccolorstyle">
+    <div class="container">
+      <div class="service-wrap">
+        <div class="row">
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-colorstyle noshadow">
+              <a href="javascript:void(Tawk_API.toggle())" class="help-item">
+                <div class="img">
+                  <img class="svg ico" src="assets/fonts/svg/livechat.svg" height="65" alt="">
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Live Chat</div>
+                  <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-colorstyle noshadow">
+              <a href="contact.html" class="help-item">
+                <div class="img">
+                  <img class="svg ico" src="assets/fonts/svg/emailopen.svg" height="65" alt="">
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Send Ticket</div>
+                  <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="help-container bg-colorstyle noshadow">
+              <a href="knowledgebase-list.html" class="help-item">
+                <div class="img">
+                  <img class="svg ico" src="assets/fonts/svg/book.svg" height="65" alt="">
+                </div>
+                <div class="inform">
+                  <div class="title mergecolor">Knowledge base</div>
+                  <div class="description seccolor">Lorem Ipsum is simply dummy text printing.</div>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** SMALL MODAL ***** -->
+  <div class="modal fade" id="myModal" tabindex="-1">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Remove Item!</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p class="mb-0">Are you sure you want to <b class="text-danger">remove</b> this item from your cart?</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-sm btn-default-fill me-1" data-bs-dismiss="modal">No</button>
+          <button type="button" class="btn btn-sm btn-default-purple-fill" data-bs-dismiss="modal">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ***** UPLOADED FOOTER FROM FOOTER.HTML ***** -->
+<footer id="footer"> </footer>
+</div>
+<!-- ***** BUTTON GO TOP ***** -->
+<a href="#" class="cd-top" title="Go Top"> <i class="fas fa-angle-up"></i> </a>
+<script>
+  let rowToDelete = null;
+
+  document.querySelectorAll('[data-bs-target="#myModal"]').forEach(btn => {
+    btn.addEventListener('click', function () {
+      rowToDelete = this.closest('tr');
+    });
+  });
+
+  document.querySelector('#myModal .btn-default-purple-fill').addEventListener('click', function () {
+    if (rowToDelete) {
+      rowToDelete.remove();
+      rowToDelete = null;
+      updateOrderTotal();
+
+      // 🔄 Actualizar botón de DLocal
+      reiniciarBotonDLocal();
+      crearBotonDLocal(obtenerTotalDesdeHTML());
+    }
+  });
+
+  function updateOrderTotal() {
+    let total = 0;
+    document.querySelectorAll('td.total').forEach(td => {
+      const value = parseFloat(td.textContent.replace(/[^0-9.-]+/g, ''));
+      total += value;
+    });
+
+    const totalOrderCell = document.querySelector('#totalOrderAmount');
+    if (totalOrderCell) {
+      totalOrderCell.textContent = '$' + total.toLocaleString();
+    }
+  }
+
+  const formatearCOP = (valor) => {
+    return new Intl.NumberFormat('es-CO', {
+      style: 'currency',
+      currency: 'COP',
+      minimumFractionDigits: 3,
+      maximumFractionDigits: 3
+    }).format(valor);
+  };
+
+  function reiniciarBotonDLocal() {
+    const contenedor = document.getElementById("boton-dlocal");
+    contenedor.innerHTML = "";
+  }
+
+  function obtenerTotalDesdeHTML() {
+    const texto = document.getElementById("totalOrderAmount").textContent;
+    return parseFloat(texto.replace(/[^\d,.-]/g, "").replace(',', '.')) || 0;
+  }
+
+  function renderCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const tbody = document.getElementById("cart-body");
+    let totalGeneral = 0;
+
+    if (carrito.length === 0) {
+      tbody.innerHTML = `<tr><td colspan="5" class="text-center">No hay productos en el carrito.</td></tr>`;
+      document.getElementById("cart-total").textContent = formatearCOP(0);
+      return;
+    }
+
+    tbody.innerHTML = "";
+
+    carrito.forEach((producto, index) => {
+      const precio = Number(producto.precio);
+      const cantidad = Number(producto.cantidad);
+      const subtotal = precio * cantidad;
+      totalGeneral += subtotal;
+
+      const row = document.createElement("tr");
+      row.className = "seccolor";
+      row.innerHTML = `
+        <td>
+          <div class="product-info">
+            ${producto.descuento ? `<div class="badge bg-purple">${producto.descuento}</div>` : ""}
+            <span>${producto.nombre}</span>
+          </div>
+        </td>
+        <td>
+          <input type="number" value="${cantidad}" min="1" class="form-control" onchange="actualizarCantidad(${index}, this.value)">
+        </td>
+        <td>
+          ${producto.precioOriginal ? `<span class="text-decoration-line-through">${formatearCOP(producto.precioOriginal)}</span><br>` : ""}
+          <b class="c-green">${formatearCOP(precio)}</b>
+        </td>
+        <td><b class="c-green">${formatearCOP(subtotal)}</b></td>
+<td>
+  <a  onclick="agregarProducto(${index})" title="Agregar"><i class="fas fa-plus-circle c-green seccolor me-2"></i></a>
+  <a  onclick="eliminarUnidad(${index})" title="Eliminar una unidad"><i class="fas fa-minus-circle c-orange seccolor me-2"></i></a>
+ 
+</td>
+      `;
+      tbody.appendChild(row);
+    });
+
+    document.getElementById("cart-total").textContent = formatearCOP(totalGeneral);
+  }
+
+  function actualizarCantidad(index, nuevaCantidad) {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+    carrito[index].cantidad = parseInt(nuevaCantidad);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    renderCarrito();
+    renderOrderSummary();
+    reiniciarBotonDLocal();
+    crearBotonDLocal(obtenerTotalDesdeHTML());
+  }
+
+  function eliminarProducto(index) {
+    const carrito = JSON.parse(localStorage.getItem('carrito'));
+    carrito.splice(index, 1);
+    localStorage.setItem('carrito', JSON.stringify(carrito));
+    renderCarrito();
+    renderOrderSummary();
+    reiniciarBotonDLocal();
+    crearBotonDLocal(obtenerTotalDesdeHTML());
+  }
+  function agregarProducto(index) {
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+  carrito[index].cantidad += 1;
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  renderCarrito();
+  renderOrderSummary();
+  reiniciarBotonDLocal();
+  crearBotonDLocal(obtenerTotalDesdeHTML());
+}
+function eliminarUnidad(index) {
+  const carrito = JSON.parse(localStorage.getItem('carrito'));
+  if (carrito[index].cantidad > 1) {
+    carrito[index].cantidad -= 1;
+  } else {
+    // Si la cantidad es 1, eliminar el producto completamente
+    carrito.splice(index, 1);
+  }
+  localStorage.setItem('carrito', JSON.stringify(carrito));
+  renderCarrito();
+  renderOrderSummary();
+  reiniciarBotonDLocal();
+  crearBotonDLocal(obtenerTotalDesdeHTML());
+}
+
+
+  function actualizarPrecio(input, precioUnitario, totalId) {
+    const cantidad = parseInt(input.value);
+    const total = (cantidad * precioUnitario).toFixed(2);
+    document.getElementById(totalId).textContent = formatearCOP(total);
+  }
+
+  function renderOrderSummary() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const tbody = document.getElementById("order-summary-body");
+    const totalEl = document.getElementById("totalOrderAmount");
+    tbody.innerHTML = "";
+
+    let totalGeneral = 0;
+    let cantidadTotal = 0;
+
+    carrito.forEach(producto => {
+      const cantidad = Number(producto.cantidad);
+      const precio = Number(producto.precio);
+      const descuento = Number(producto.descuento) || 0;
+
+      const precioConDescuento = precio * (1 - descuento / 100);
+      const totalProducto = precioConDescuento * cantidad;
+      totalGeneral += totalProducto;
+      cantidadTotal += cantidad;
+
+      const row = document.createElement("tr");
+      row.className = "seccolor";
+      row.innerHTML = `
+        <td>${producto.descripcion || producto.nombre}</td>
+        <td>${cantidad}</td>
+        <td></td>
+        <td>${descuento > 0 ? descuento + '%' : ''}</td>
+        <td>${formatearCOP(totalProducto)}</td>
+      `;
+      tbody.appendChild(row);
+    });
+
+    // ➕ Envío Gratis
+    const filaEnvio = document.createElement("tr");
+    filaEnvio.className = "seccolor";
+    filaEnvio.innerHTML = `
+      <td colspan="4">Envío</td>
+      <td><b>Gratis</b></td>
+    `;
+    tbody.appendChild(filaEnvio);
+
+    // 📉 Descuento general si hay más de 3 unidades
+    let descuentoGeneral = 0;
+    let totalConDescuento = totalGeneral;
+
+    if (cantidadTotal > 2) {
+      descuentoGeneral = totalGeneral * 0.10;
+      totalConDescuento = totalGeneral - descuentoGeneral;
+
+      const filaSubtotal = document.createElement("tr");
+      filaSubtotal.className = "seccolor";
+      filaSubtotal.innerHTML = `
+        <td colspan="4">Subtotal sin descuento</td>
+        <td>${formatearCOP(totalGeneral)}</td>
+      `;
+      tbody.appendChild(filaSubtotal);
+
+      const filaDescuento = document.createElement("tr");
+      filaDescuento.className = "seccolor";
+      filaDescuento.innerHTML = `
+        <td colspan="4">Descuento por cantidad (10%)</td>
+        <td>- ${formatearCOP(descuentoGeneral)}</td>
+      `;
+      tbody.appendChild(filaDescuento);
+    }
+
+    totalEl.textContent = formatearCOP(totalConDescuento);
+  }
+
+  window.onload = function () {
+    renderCarrito();
+    renderOrderSummary();
+
+    const totalCalculado = obtenerTotalDesdeHTML();
+    console.log("🧮 Total calculado:", totalCalculado);
+    if (totalCalculado > 0) {
+      crearBotonDLocal(totalCalculado);
+    }
+  };
+</script>
+
+
+<script>
+  function obtenerTotalDesdeHTML() {
+    const totalTexto = document.getElementById("totalOrderAmount").innerText;
+
+    // 1. Elimina símbolo de peso y comas
+    // 2. Convierte a número flotante (por si acaso hay centavos)
+    // 3. Multiplica si necesitas convertir a centavos (pero en COP no suele hacerse)
+    const totalLimpio = totalTexto
+      .replace('$', '')         // quita símbolo $
+      .replace(/,/g, '')        // quita comas
+      .trim();                  // limpia espacios
+
+    const numero = parseFloat(totalLimpio);
+
+    // Asegúrate que es un número válido mayor que 0
+    return isNaN(numero) || numero <= 0 ? 0 : Math.round(numero);
+  }
+
+  function crearBotonDLocal(monto) {
+    const script = document.createElement("script");
+    script.dataset.referenceId = "9a4e09ea-379a-45c9-8233-0f518a7c8ad9";
+    script.innerHTML = `
+      (function(){
+        const z=!!window.DlocalGo,
+        s=z ? document.querySelector('script[src="https://static.dlocalgo.com/dlocalgo.min.js"]') : document.createElement("script");
+
+        if (!z) {
+          s.src = "https://static.dlocalgo.com/dlocalgo.min.js";
+          s.async = true;
+          document.body.appendChild(s);
+        }
+
+        s.addEventListener("load", () => {
+          const e = document.querySelector('script[data-reference-id="9a4e09ea-379a-45c9-8233-0f518a7c8ad9"]'),
+                t = e.parentNode,
+                n = "dp-btn-9a4e09ea-379a-45c9-8233-0f518a7c8ad9",
+                c = document.createElement("div");
+
+          c.id = n;
+          t.insertBefore(c, e);
+
+          new DlocalGo("GcDKCzlOsxaBqFsCCMKskyUOmhhoLGIe").createCheckout(n, {
+            subType: "BUTTON",
+            country: "CO",
+            currency: "COP",
+            amount: "${monto}",
+            lang: "",
+            text: "_____________"
+          });
+        });
+      })()
+    `;
+
+    document.getElementById("boton-dlocal").appendChild(script);
+  }
+
+
+</script>
+<script>
+  const select = document.getElementById("metodoPago");
+  const boton = document.getElementById("btnContinuar");
+
+  function actualizarBoton() {
+    const valor = select.value;
+
+    if (valor === "") {
+      // Desactivar botón
+      boton.classList.add("disabled");
+      boton.style.pointerEvents = "none";
+      boton.style.opacity = "0.6";
+      boton.setAttribute("href", "#");
+    } else {
+      // Activar botón
+      boton.classList.remove("disabled");
+      boton.style.pointerEvents = "auto";
+      boton.style.opacity = "1";
+
+      // Redirigir según la opción
+      if (valor === "tarjeta" || valor === "pse") {
+        boton.setAttribute("href", "checkout.html");
+      } else if (valor === "contraentrega") {
+        boton.setAttribute("href", "checkout2.html");
+      }
+    }
+  }
+
+  // Ejecutar al cargar la página
+  window.addEventListener("DOMContentLoaded", actualizarBoton);
+
+  // Ejecutar cuando cambie la selección
+  select.addEventListener("change", actualizarBoton);
+</script>
+<script>
+  const menuToggle = document.querySelector(".menu-toggle");
+  const navLinks = document.getElementById("navLinks");
+  const navbar = document.querySelector(".navbar");
+
+  // Alternar menú
+  function toggleMenu() {
+    navLinks.classList.toggle("active");
+  }
+
+  // Cerrar menú si haces clic fuera
+  document.addEventListener("click", (e) => {
+    const isClickInside = navLinks.contains(e.target) || menuToggle.contains(e.target);
+    if (!isClickInside && navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+  });
+
+  // Scroll: ocultar navbar hacia abajo, mostrar hacia arriba
+  let lastScrollTop = window.scrollY;
+
+  window.addEventListener("scroll", () => {
+    const currentScroll = window.scrollY;
+    const scrollingDown = currentScroll > lastScrollTop;
+
+    // Oculta el menú si está abierto
+    if (scrollingDown && navLinks.classList.contains("active")) {
+      navLinks.classList.remove("active");
+    }
+
+    // Efecto moderno: navbar se oculta al bajar, aparece al subir
+    if (scrollingDown) {
+      navbar.classList.remove("scroll-show");
+      navbar.classList.add("scroll-hide");
+    } else {
+      navbar.classList.remove("scroll-hide");
+      navbar.classList.add("scroll-show");
+    }
+
+    lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevenir valores negativos
+  });
+</script>
+<script>
+  function buscarConEnter(event) {
+    if (event.key === "Enter") {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        // Redirige a dedicated.html con el parámetro de búsqueda
+        window.location.href = `dedicated.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  }
+</script>
+</body>
+
+<!-- Mirrored from inebur.com/antler/template/cart by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:13 GMT -->
+</html>
