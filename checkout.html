@@ -19,30 +19,20 @@
     <link type="text/css" href="assets/css/vendors.min.css" rel='stylesheet'>
     <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
     <!-- Javascript -->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
+
     <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
     <link type="text/css" href="assets/css/style.css" rel='stylesheet'>
     <script defer type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+
+     <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
   </head>
-  <body style="background-color: rgb(210, 210, 210);">
+  <body style="background-color: rgba(242, 242, 242, 0.59);">
     
     <div class="box-container limit-width">
       <!-- ***** SETTINGS ****** -->
     <section id="settings"> </section>
     <!-- ***** LOADING PAGE ****** -->
-    <div id="spinner-area">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-        <div class="spinner-txt">Antler...</div>
-      </div>
-    </div>
+
     <!-- ***** FRAME MODE ****** -->
     <div class="body-borders" data-border="20">
       <div class="top-border bg-white"></div>
@@ -96,6 +86,8 @@
       </ul>
     </div>
   </nav>
+<br>
+
 
   <!-- ***** KNOWLEDGEBASE ***** -->
   <section class="checkout-section  bg-light">
@@ -343,53 +335,57 @@
     </section>
     <!-- ***** HELP ***** -->
   
-    <section class="services help pt-4 pb-80 bg-seccolorstyle">
-      <div class="container">
-        <div class="service-wrap">
-          <div class="row">
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="help-container bg-colorstyle noshadow">
-                <a href="javascript:void(Tawk_API.toggle())" class="help-item">
-                  <div class="img">
-                    <img class="icono"  src="assets/img/whatsapp.png" width="80" height="80" alt="">
-                  </div>
-                  <div class="inform">
-                    <div class="title mergecolor">Chat en vivo</div>
-                    <div class="description seccolor">Tienes alguna duda?, comunicate al <b>WhatsApp</b>.</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="help-container bg-colorstyle noshadow">
-                <a href="contact.html" class="help-item">
-                  <div class="img">
-                    <img class="svg ico" src="assets/img/Envio.png" height="65" alt="">
-                  </div>
-                  <div class="inform">
-                    <div class="title mergecolor">Envío Express</div>
-                    <div class="description seccolor"> ¡Recibe tu pedido más rápido en las principales ciudades del país!</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-            <div class="col-sm-12 col-md-6 col-lg-4">
-              <div class="help-container bg-colorstyle noshadow">
-                <a href="knowledgebase-list.html" class="help-item">
-                  <div class="img">
-                    <img class="svg ico" src="assets/img/seguro.png" height="65" alt="">
-                  </div>
-                  <div class="inform">
-                    <div class="title mergecolor">Pago Seguro</div>
-                    <div class="description seccolor">Compra con tranquilidad, aceptamos pagos en línea confiables.</div>
-                  </div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <section class="benefits-section">
+  <div class="benefits">
+    
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-envio"></div>
+      <h3>¡Recíbelo el mismo día!</h3>
+      <p>Disfruta de envío gratuito en todo Bogotá, con entregas express el mismo día en ciudades principales.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-whatsapp"></div>
+      <h3>¡Estamos para ayudarte!</h3>
+      <p>Cualquier duda, inquietud o solicitud de garantía será atendida de inmediato por nuestro equipo.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-seguro"></div>
+      <h3>Paga como prefieras</h3>
+      <p>Compra de forma segura online o paga contra entrega al recibir tu producto. ¡Tú decides!</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- JS para cargar animaciones -->
+<script>
+// Inicializa las animaciones Lottie desde archivos locales
+lottie.loadAnimation({
+  container: document.getElementById('lottie-envio'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/envio.json'
+});
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-whatsapp'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/whatsapp.json'
+});
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-seguro'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/seguro.json'
+});
+</script>
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
    
 
@@ -709,7 +705,17 @@ if (monto > 0) {
       lastScrollTop = currentScroll <= 0 ? 0 : currentScroll; // prevenir valores negativos
     });
   </script>
-
+<script>
+  function buscarConEnter(event) {
+    if (event.key === "Enter") {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        // Redirige a dedicated.html con el parámetro de búsqueda
+        window.location.href = `dedicated.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  }
+</script>
 
 
 
