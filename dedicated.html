@@ -98,7 +98,7 @@
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     
         <ul class="nav-links" id="navLinks">
-          <li><a href="/index.html">Inicio</a></li>
+          <li><a href="index.html">Inicio</a></li>
           <li><a href="#features">Productos</a></li>
           <li><a href="#pricing">Pricing</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -855,8 +855,8 @@
         nombre,
         precio,
         cantidad: 1,
-        precioOriginal: Math.round(precio * 1.4),
-        descuento: "Ahorra 40%"
+        precioOriginal: Math.round(precio * 1.43),
+        descuento: "Ahorra 30%"
       });
     }
 
@@ -1066,6 +1066,17 @@ if (query) {
   // Aquí puedes hacer la búsqueda, filtrar productos, etc.
   console.log("Buscando:", query);
 }
+</script>
+<script>
+  function buscarConEnter(event) {
+    if (event.key === "Enter") {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        // Redirige a dedicated.html con el parámetro de búsqueda
+        window.location.href = `dedicated.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  }
 </script>
 </body>
 
