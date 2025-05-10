@@ -37,13 +37,7 @@
       <!-- ***** SETTINGS ****** -->
     <section id="settings"> </section>
     <!-- ***** LOADING PAGE ****** -->
-    <div id="spinner-area">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-        <div class="spinner-txt">Antler...</div>
-      </div>
-    </div>
+   
     <!-- ***** FRAME MODE ****** -->
     <div class="body-borders" data-border="20">
       <div class="top-border bg-white"></div>
@@ -105,7 +99,8 @@
               <div class="col-md-12 col-lg-12">
                 <div class="wrapper targetDiv sec-grad-white-to-green noshadow bg-colorstyle">
                   <h1 class="mergecolor" style="color: rgb(4, 108, 255);">Resumen pedido</h1>
-                  <p class="mergecolor">Todos nuestros productos cuentan con un <b>10% de descuento</b> adicional despues de 2 unidades.</p>
+                  <br>
+                  <p class="mergecolor">¡Aprovecha! Por la compra de 2 unidades o más, accede a un precio especial de mayorista con un <b>20% de descuento.</b> Ideal para regalar o compartir.</p>
                   <div class="row">
                     <div class="col-md-12 pt-4">
                       <div class="table-responsive-lg">
@@ -119,6 +114,7 @@
                               <th>Acciones</th>
                             </tr>
                           </thead>
+                          
                           <tbody id="cart-body">
                             <!-- Aquí se agregan dinámicamente los productos -->
                           </tbody>
@@ -143,12 +139,15 @@
                                   <td><div class="badge bg-purple me-1">Selecciona</div><span class="seccolor"> Metodos de pago</span></td>
                                   <td>
                                     <div class="cd-select">
-                                      <select id="metodoPago" class="select-filter seccolor" required>
-                                        <option value="">Selecciona métodos de pago</option>
-                                        <option value="tarjeta">Paga con Tarjeta</option>
-                                        <option value="pse">Paga con PSE</option>
-                                        <option value="contraentrega">Pago Contraentrega</option>
-                                      </select>
+                                      <form id="formPago">
+                                        <select id="metodoPago" required>
+                                          <option value="">Selecciona método de pago</option>
+                                          <option value="tarjeta">Pago con Tarjeta/PSE</option>
+                                          <option value="contraentrega">Pago Contraentrega</option>
+                                        </select>
+                                      
+                                        
+                                      </form>
                                     </div>
                                   </td>
                                 </tr>
@@ -212,7 +211,9 @@
                   </table>
                 </div>
               </div>
-              <a href="checkout.html" class="btn btn-default-yellow-fill mb-3"id="btnContinuar" >Continuar <i class="fas fa-arrow-alt-circle-right"></i></a>&nbsp;&nbsp;
+              <button class="btn btn-default-yellow-fill mb-3" id="btnContinuar">
+                Continuar <i class="fas fa-arrow-alt-circle-right"></i>
+              </button>
               <a href="index.html" class="btn btn-default-fill mb-3">Seguir comprando</a>
             </aside>
           
@@ -492,7 +493,7 @@ function eliminarUnidad(index) {
     let totalConDescuento = totalGeneral;
 
     if (cantidadTotal > 2) {
-      descuentoGeneral = totalGeneral * 0.10;
+      descuentoGeneral = totalGeneral * 0.20;
       totalConDescuento = totalGeneral - descuentoGeneral;
 
       const filaSubtotal = document.createElement("tr");
@@ -506,7 +507,7 @@ function eliminarUnidad(index) {
       const filaDescuento = document.createElement("tr");
       filaDescuento.className = "seccolor";
       filaDescuento.innerHTML = `
-        <td colspan="4">Descuento por cantidad (10%)</td>
+        <td colspan="4">Descuento Mayorista (20%)</td>
         <td>- ${formatearCOP(descuentoGeneral)}</td>
       `;
       tbody.appendChild(filaDescuento);
@@ -593,17 +594,7 @@ function eliminarUnidad(index) {
   function actualizarBoton() {
     const valor = select.value;
 
-    if (valor === "") {
-      // Desactivar botón
-      boton.classList.add("disabled");
-      boton.style.pointerEvents = "none";
-      boton.style.opacity = "0.6";
-      boton.setAttribute("href", "#");
-    } else {
-      // Activar botón
-      boton.classList.remove("disabled");
-      boton.style.pointerEvents = "auto";
-      boton.style.opacity = "1";
+
 
       // Redirigir según la opción
       if (valor === "tarjeta" || valor === "pse") {
@@ -612,7 +603,7 @@ function eliminarUnidad(index) {
         boton.setAttribute("href", "checkout2.html");
       }
     }
-  }
+  
 
   // Ejecutar al cargar la página
   window.addEventListener("DOMContentLoaded", actualizarBoton);
@@ -673,6 +664,31 @@ function eliminarUnidad(index) {
     }
   }
 </script>
+<script>
+  window.addEventListener('DOMContentLoaded', function () {
+    const metodoGuardado = localStorage.getItem('metodoPagoSeleccionado');
+    const select = document.getElementById('metodoPago');
+    if (metodoGuardado && select) {
+      select.value = metodoGuardado;
+    }
+
+    document.getElementById('btnContinuar').addEventListener('click', function (e) {
+      e.preventDefault(); // Prevenir cualquier comportamiento predeterminado
+
+      const metodo = document.getElementById('metodoPago').value;
+
+      if (metodo === 'tarjeta') {
+        window.location.href = 'checkout.html';
+      } else if (metodo === 'contraentrega') {
+        window.location.href = 'checkout2.html';
+      } else {
+        alert('Por favor selecciona un método de pago.');
+      }
+    });
+  });
+</script>
+
+
 </body>
 
 <!-- Mirrored from inebur.com/antler/template/cart by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 04 Apr 2025 16:23:13 GMT -->
