@@ -7,8 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="INEBUR is owner of Antler">
-    <link href="assets/img/favicon.ico" rel="shortcut icon">
-    <title>Antler - Hosting Provider & WHMCS Template</title>
+    <link href="assets/img/logo.png" rel="shortcut icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <title>D-TopTech</title>
     <!-- Font Style -->
     <link href="assets/fonts/fontawesome/css/all.min.css" rel='stylesheet'>
     <link href="assets/fonts/fonts.min.css" rel='stylesheet'>
@@ -21,35 +22,20 @@
     <link type="text/css" href="assets/css/theme.min.css" rel='stylesheet'>
     <link type="text/css" href="assets/css/style.css" rel='stylesheet'>
     <!-- Javascript -->
-    <script type="text/javascript" src="assets/js/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/gdpr-cookie.min.js"></script>
-    <script type="text/javascript" src="assets/js/popper.min.js"></script>
+
     <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/jquery.magnific-popup.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/flickity.pkgd.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/slick.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/aos.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/swiper.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/mixitup.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/mixitup.multifilter.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/mixevents.js"></script>
-    <script defer type="text/javascript" src="assets/js/jquery.lazyload-any.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/filter.js"></script>
-    <script defer type="text/javascript" src="assets/js/scripts.min.js"></script>
-    <script defer type="text/javascript" src="assets/js/settings-init.js"></script>
+
+
+ 
+
+ <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
   </head>
   <body >
   <div class="box-container limit-width">
     <!-- ***** SETTINGS ****** -->
     <section id="settings"> </section>
     <!-- ***** LOADING PAGE ****** -->
-    <div id="spinner-area">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
-        <div class="spinner-txt">Antler...</div>
-      </div>
-    </div>
+
     <!-- ***** FRAME MODE ****** -->
     <div class="body-borders" data-border="20">
       <div class="top-border bg-white"></div>
@@ -90,16 +76,15 @@
         <!-- Búsqueda -->
         <div class="search-container">
         
-          <input type="text" id="searchInput" placeholder="🔍 Buscar...">
+          <input type="text" id="searchInput" placeholder="🔍 Buscar..."onkeydown="buscarConEnter(event)">
         </div>
     
         <button class="menu-toggle" onclick="toggleMenu()">☰</button>
     
         <ul class="nav-links" id="navLinks">
-          <li><a href="/index.html">Inicio</a></li>
-          <li><a href="#features">Productos</a></li>
-          <li><a href="#pricing">Pricing</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="index.html">Inicio</a></li>
+          <li><a href="dedicated.html">Productos</a></li>
+          <li><a href="contact.html">Contacto</a></li>
     
           <!-- 🛒 CARRITO DESKTOP -->
           <li class="carrito-dropdown">
@@ -117,6 +102,9 @@
         </ul>
       </div>
     </nav>
+
+      
+   
     <!-- 🛒 FAB flotante para móviles -->
 <div class="fab-carrito" onclick="toggleCarritoFlotante()">
   🛒 <span id="carrito-contador-fab" class="fab-contador">0</span>
@@ -288,53 +276,7 @@
         }
       }
 
-      .benefits {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  padding: 30px 20px;
-  background-color: #f9f9f9;
-  border-top: 1px solid #eee;
-  margin-top: 40px;
-}
 
-.benefits div {
-  width: 100%;
-  max-width: 400px;
-  text-align: center;
-  padding: 10px;
-  font-size: 16px;
-  line-height: 1.6;
-  color: #333;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  transition: transform 0.3s;
-}
-
-.benefits div:hover {
-  transform: translateY(-5px);
-}
-
-.benefits span {
-  display: block;
-  font-size: 28px;
-  margin-bottom: 10px;
-}
-
-/* Estilo para pantallas más grandes (desktop) */
-@media (min-width: 768px) {
-  .benefits {
-    flex-direction: row;
-    justify-content: center;
-    padding: 40px;
-  }
-
-  .benefits div {
-    max-width: 300px;
-  }
-}
 .carousel-wrapper {
   position: relative;
   width: 100%;
@@ -449,19 +391,7 @@
   }
 }
 
-/* CARACTERÍSTICAS */
-.features-section {
-  background: #f1faff;
-  padding: 40px 20px;
-  text-align: center;
-  animation: fadeInUp 1s ease forwards;
-}
 
-.features-section h2 {
-  font-size: 28px;
-  margin-bottom: 20px;
-  color: #0071e3;
-}
 
 .features-list {
   list-style: none;
@@ -480,28 +410,7 @@
 }
 
 /* COMENTARIOS */
-.reviews-section {
-  padding: 40px 20px;
-  background: #fff;
-  text-align: center;
-  animation: fadeInUp 1s ease forwards;
-}
 
-.reviews-section h2 {
-  font-size: 28px;
-  margin-bottom: 30px;
-  color: #333;
-}
-
-.review {
-  background: #f9f9f9;
-  padding: 20px;
-  margin: 10px auto;
-  max-width: 500px;
-  border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
-  animation: fadeInUp 1s ease forwards;
-}
 /* ESTRUCTURA GENERAL DEL NAVBAR */
 
 
@@ -534,7 +443,7 @@
   
       <div class="right">
         <div class="small-orange">Envio Gratis</div>
-        <div class="title">Compra AirPods 4</div>
+        <div class="title">Compra AirPods Pro 2</div>
   
         <div class="countdown">
           Oferta termina en: <span id="timer">00:00:00</span>
@@ -543,38 +452,68 @@
         <div class="model-option selected" onclick="selectModel(this)">
           <strong>AirPods 4 ANC Unidad</strong>
           <div class="price">
-            <span class="actual">$89.999</span>
-            <span class="old">$150.000</span>
-            <span class="discount">-40%</span>
+            <span class="actual">$99.999</span>
+            <span class="old">$142.999</span>
+            <span class="discount">-30%</span>
           </div>
         </div>
-
+        <img src="assets/img/paga1.png" alt="Pago seguro" class="pago-img">
+       
   
-        <a class="btn btn-default-yellow-fill btn-carrito"
-          data-id="teclado" data-nombre="Airpods Pro 2" data-precio="89.999"
-          onclick="agregarAlCarrito(this)">
-          Agregar 🛒
-        </a>
-        <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
-        data-id="teclado" data-nombre="Airpods Pro 2" data-precio="89.999"
-        onclick="agregarAlCarrito(this)">Comprar</a>
-  <br>
-  <br>
-        <div class="personalization">
-          <h4>Gratis una funda para tus AirPods Pro 2</h4>
-          <p>Por la compra de los AirPods Pro 2, lleva gratis un case para estos</p>
-          <strong style="float: right;">Gratis</strong>
-          <br>
+        <div class="botones-producto">
+          <a class="btn-personal agregar"
+             data-id="teclado"
+             data-nombre="Airpods Pro 2"
+             data-precio="99.999"
+             onclick="agregarAlCarrito(this)">
+             🛒 Agregar al carrito
+          </a>
+        
+          <a href="cart.html" class="btn-personal comprar" id="btnContinuar"
+          data-id="teclado"
+          data-nombre="Airpods Pro 2"
+          data-precio="99.999"
+          data-metodo="tarjeta"
+          onclick="agregarAlCarrito(this); guardarMetodoPago(this);">
+          💳 Comprar ahora
+          <span style="background-color: #e0f7ec; color: #2e7d32; font-size: 11px; border-radius: 12px; padding: 2px 6px; margin-left: 8px;">
+          -10% Extra
+          </span>
+       </a>
+        
+          <a href="cart.html" class="btn-personal contraentrega" id="btnContinuar"
+             data-id="teclado"
+             data-nombre="Airpods Pro 2"
+             data-precio="99.999"
+             data-metodo="contraentrega"
+             onclick="agregarAlCarrito(this); guardarMetodoPago(this);">
+             📦 Pago Contraentrega
+          </a>
         </div>
+     
+  <br>
+  <br>
+  <div class="personalization">
+    <div class="contenido">
+      <div class="texto">
+        <h5><b>Obsequio.</b> Case por la compra de tus AirPods Pro 2</h5>
+
+      </div>
+      <img src="assets/img/case.png" alt="Envío rápido" class="icono-regalo">
+    </div>
+  </div>
       </div>
     </div>
 
 
   
+   
+  <section class="features-section">
+  <div class="wave-background"></div> <!-- Fondo dinámico de ondas -->
 
-  
-    <section class="features-section">
-      <h2>Características principales</h2>
+  <div class="features-content">
+    <div class="features-text">
+      <h2 class="features-title">Características principales</h2>
       <ul class="features-list">
         <li>🔊 Sonido envolvente de alta calidad</li>
         <li>🔋 Hasta 24 horas de batería con estuche</li>
@@ -582,78 +521,337 @@
         <li>📶 Conexión automática con tus dispositivos</li>
         <li>💧 Resistencia al agua y sudor</li>
       </ul>
-      <img src="assets/img/GARANTIA.webp"  class="img-producto">
-    </section>
-
-    <div class="benefits">
-      <div>
-        <span>🚚</span>
-        <strong> ¡Recíbelo el mismo día!</strong>
-        Disfruta de envío gratuito en todo el país, con entregas express el mismo día en ciudades principales.
-      </div>
-      <div>
-        <span>🤝</span>
-         <strong> ¡Estamos para ayudarte!</strong>
-Cualquier duda, inquietud o solicitud de garantía será atendida de inmediato por nuestro equipo.
-      </div>
-      <div>
-        <span>💳</span>
-        <strong> Paga como prefieras</strong>
-Compra de forma segura online o paga contra entrega al recibir tu producto. ¡Tú decides!
+<br>
+      <div class="garantia-container">
+        <img src="assets/img/ChatGPT Image 1 may 2025, 15_21_29.png" alt="Garantía del producto" class="garantia-img">
+        <img src="assets/img/ChatGPT Image 1 may 2025, 15_41_54.png" alt="Garantía del producto" class="garantia-img">
+ 
       </div>
     </div>
+    <div class="features-image">
+      <img src="assets/img/GARANTIA.webp" alt="Garantía del producto">
     
-    <!-- SECCIÓN DE COMENTARIOS -->
-    <section class="reviews-section">
-      <h2>Opiniones de clientes</h2>
-      <div class="review">
-        <p><strong>⭐️⭐️⭐️⭐️⭐️ Carla M.</strong></p>
-        <p>Me encantaron, la batería dura mucho y el sonido es increíble. Muy recomendados!</p>
+    </div>
+
+
+    <br>
+ 
+ 
+  </div>
+
+</section>
+<section class="how-it-works-section">
+  <h2 class="how-title">¿Cómo funcionan?</h2>
+  <div class="how-cards">
+    <div class="how-card">
+      <img src="https://media.giphy.com/media/fuJPZBIIqzbt1kAYVc/giphy.gif" alt="Emparejamiento rápido">
+      <h3>Emparejamiento Instantáneo</h3>
+      <p>Abre el estuche y se conectan automáticamente a tu dispositivo.</p>
+    </div>
+    <div class="how-card">
+      <img src="https://media.giphy.com/media/U3qYN8S0j3bpK/giphy.gif" alt="Control táctil">
+      <h3>Control Táctil</h3>
+      <p>Toca para pausar, saltar canciones o responder llamadas fácilmente.</p>
+    </div>
+    <div class="how-card">
+      <img src="https://media.giphy.com/media/hvRJCLFzcasrR4ia7z/giphy.gif" alt="Carga rápida">
+      <h3>Carga Rápida</h3>
+      <p>Solo unos minutos en el estuche te dan horas de uso continuo.</p>
+    </div>
+  </div>
+</section>
+
+
+    
+    <script src="https://unpkg.com/lottie-web@latest/build/player/lottie.min.js"></script>
+
+<section class="benefits-section">
+  <div class="benefits">
+    
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-envio"></div>
+      <h3>¡Recíbelo el mismo día!</h3>
+      <p>Disfruta de envío gratuito en todo Bogotá, con entregas express el mismo día en ciudades principales.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-whatsapp"></div>
+      <h3>¡Estamos para ayudarte!</h3>
+      <p>Cualquier duda, inquietud o solicitud de garantía será atendida de inmediato por nuestro equipo.</p>
+    </div>
+
+    <div class="benefit-card">
+      <div class="lottie-container" id="lottie-seguro"></div>
+      <h3>Paga como prefieras</h3>
+      <p>Compra de forma segura online o paga contra entrega al recibir tu producto. ¡Tú decides!</p>
+    </div>
+
+  </div>
+</section>
+
+<!-- JS para cargar animaciones -->
+<script>
+// Inicializa las animaciones Lottie desde archivos locales
+lottie.loadAnimation({
+  container: document.getElementById('lottie-envio'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/envio.json'
+});
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-whatsapp'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/whatsapp.json'
+});
+
+lottie.loadAnimation({
+  container: document.getElementById('lottie-seguro'),
+  renderer: 'svg',
+  loop: true,
+  autoplay: true,
+  path: 'assets/lottie/seguro.json'
+});
+</script>
+
+    <!-- SECCIÓN DE SIMILARES -->
+    <section class="related-products-section">
+      <div class="wave-background"></div>
+      <div class="related-products-content">
+        <h2 class="related-title">Productos Similares</h2>
+    
+        <!-- Botones Flechas -->
+        <button class="arrow left" onclick="scrollProducts(-1)">←</button>
+        <button class="arrow right" onclick="scrollProducts(1)">→</button>
+    
+        <div class="products-container" id="productsContainer">
+          <!-- Producto 1 -->
+           <a href="producto1.html" class="product-link">
+            <div class="product-card">
+              <img src="assets/img/airpods-4-anc.png" alt="Producto 1">
+              <div class="price-tag">$109.999 <del>$142.999</del></div>
+              <h3 class="product-name">AirPods 4 ANC 1.1</h3>
+              <p class="desc">Nuevos AirPods 4. El último grito en sonido y confort. Con cancelacion de ruido y estuche Tactil.</p>
+              <a class="btn btn-default-yellow-fill btn-carrito"
+                data-id="Airpods 4 ANC" data-nombre="Airpods 4 ANC" data-precio="109.999"
+                onclick="agregarAlCarrito(this)">Agregar 🛒
+              <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+                data-id="Airpods 4 ANC" data-nombre="Airpods 4 ANC" data-precio="109.999"
+                onclick="agregarAlCarrito(this)">Comprar</a>
+              </a>
+            </div>
+        </a>
+          <!-- Producto 2 -->
+          <a href="producto2.html" class="product-link">
+            <div class="product-card" >
+              <img src="assets/img/Ultrapods/1.webp" alt="Producto 2">
+              <div class="price-tag">$109.999 <del>$142.999</del></div>
+              <h3 class="product-name">UltraPods 5.3</h3>
+              <p class="desc">Un nuevo diseño transparente y cuentan con Bluetooth 5.3 + ENC, con botones tactiles y entrada tipo C</p>
+                        <a class="btn btn-default-yellow-fill btn-carrito"
+                          data-id="Ultrapods 5.3" data-nombre="Ultrapods 5.3" data-precio="49.999"
+                          onclick="agregarAlCarrito(this)">
+                          Agregar 🛒
+                          <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+                          data-id="Ultrapods 5.3" data-nombre="Ultrapods 5.3" data-precio="49.999"
+                          onclick="agregarAlCarrito(this)">Comprar</a>
+                        </a>
+                        
+            </div>
+          </a>
+          <!-- Producto 3 -->
+          <a href="producto3.html" class="product-link">
+            <div class="product-card" >
+              <img src="assets/img/Game-Console/IMG_1811.JPG" alt="Producto 3">
+              <div class="price-tag">$109.999 <del>$142.999</del></div>
+              <h3 class="product-name">Game Console R36S</h3>
+              <p class="desc">R36S: Potencia retro en tu mano. Pantalla IPS, batería de larga duración y estilo único. ¡Juega sin límites!</p>
+                        <a class="btn btn-default-yellow-fill btn-carrito"
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">
+                          Agregar 🛒
+                          <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">Comprar</a>
+                        </a>
+                        
+            </div>
+          </a>
+          <a href="producto3.html" class="product-link">
+            <div class="product-card" >
+              <img src="assets/img/Series10.webp" alt="Producto 3">
+              <div class="price-tag">$109.999 <del>$142.999</del></div>
+              <h3 class="product-name">Hk10 Pro Max Plus Series 10 - 1.1</h3>
+              <p class="desc">La mejor calidad serie 10 del mercado, con pantalla Amoled de alta resolución y precisión tamaño real 1.1.</p>
+                        <a class="btn btn-default-yellow-fill btn-carrito"
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">
+                          Agregar 🛒
+                          <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">Comprar</a>
+                        </a>
+                        
+            </div>
+          </a>
+          <a href="producto3.html" class="product-link">
+            <div class="product-card" >
+              <img src="assets/img/ultra3.webp" alt="Producto 3">
+              <div class="price-tag">$109.999 <del>$142.999</del></div>
+              <h3 class="product-name">Hk10 Pro Max Plus Series 10 - 1.1</h3>
+              <p class="desc">La mejor calidad serie 10 del mercado, con pantalla Amoled de alta resolución y precisión tamaño real 1.1.</p>
+                        <a class="btn btn-default-yellow-fill btn-carrito"
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">
+                          Agregar 🛒
+                          <a href="cart.html" class="btn btn-default-yellow-fill btn-carrito" 
+                          data-id="Game Console R36S" data-nombre="Game Console R36S" data-precio="239.999"
+                          onclick="agregarAlCarrito(this)">Comprar</a>
+                        </a>
+                        
+            </div>
+          </a>
+
+          <!-- Puedes añadir más productos aquí -->
+        </div>
       </div>
-      <div class="review">
-        <p><strong>⭐️⭐️⭐️⭐️ Pedro R.</strong></p>
+    </section>
+
+    
+
+
+<!-- Sección de Opiniones -->
+<section class="testimonial-carousel-section">
+  <h2><b>Opiniones de clientes</b></h2>
+  <br>
+
+  <!-- Carrusel de Testimonios -->
+  <div class="testimonial-carousel">
+    <div class="testimonial-carousel" id="testimonialCarousel">
+      <!-- Slides existentes -->
+      <div class="testimonial-slide active">
+        <img src="assets/img/persona.png" alt="Perfil Carla" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        </div>
+        <h3><b>Carla Giraldo</b></h3>
+        <p>Me encantaron, la batería dura mucho y el sonido es increíble. ¡Muy recomendados!</p>
+      </div>
+      <div class="testimonial-slide">
+        <img src="assets/img/persona.png" alt="Perfil Pedro" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="far fa-star"></i>
+        </div>
+        <h3><b>Pedro Rodriguez</b></h3>
         <p>Son muy cómodos y la calidad del audio es excelente. Los uso todos los días.</p>
       </div>
-      <div class="review">
-        <p><strong>⭐️⭐️⭐️⭐️⭐️ Lucía G.</strong></p>
+      <div class="testimonial-slide">
+        <img src="assets/img/persona.png" alt="Perfil Lucía" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <h3><b>Lucía Galindo</b></h3>
         <p>Superaron mis expectativas, llegaron rápido y funcionan perfecto.</p>
       </div>
-    </section>    
+      <div class="testimonial-slide">
+        <img src="assets/img/persona.png" alt="Perfil Daniel" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i><i class="far fa-star"></i>
+        </div>
+        <h3><b>Daniel Torres</b></h3>
+        <p>Excelente calidad de sonido y muy buena atención al cliente. ¡Repetiré!</p>
+      </div>
+      <div class="testimonial-slide">
+        <img src="assets/img/persona.png" alt="Perfil Sofía" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">
+          <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+        </div>
+        <h3><b>Sofía Landinez</b></h3>
+        <p>La conexión es rápida y estable, perfectos para mi trabajo diario.</p>
+      </div>
+    </div>
+  </div>
 
+  <!-- Dots del carrusel -->
+  <div class="testimonial-dots" id="testimonialDots">
+    <span class="testimonial-dot active"></span>
+    <span class="testimonial-dot"></span>
+    <span class="testimonial-dot"></span>
+    <span class="testimonial-dot"></span>
+    <span class="testimonial-dot"></span>
+  </div>
 
-    <section class="contact-section">
-      <header>
-        <h2>Contáctanos</h2>
-      </header>
-      <div class="container">
-        <div class="contact-info">
-          <div class="info-item">
-            <h3>Dirección</h3>
+  <!-- Formulario para añadir comentario -->
+  <div class="add-testimonial" style="margin-top: 40px; max-width: 500px; margin-left: auto; margin-right: auto; text-align: center;">
+    <h3 style="font-weight: 600; margin-bottom: 10px;">Añadir tu comentario</h3>
+    <form id="testimonialForm" style="display: flex; flex-direction: column; gap: 10px;">
+      <input type="text" id="nombre" placeholder="Tu nombre" required style="padding: 10px; border-radius: 10px; border: 1px solid #ccc; font-size: 16px;">
+      <textarea id="comentario" placeholder="Escribe tu opinión..." required style="padding: 10px; border-radius: 10px; border: 1px solid #ccc; font-size: 16px; resize: none;"></textarea>
+
+      <!-- Estrellas de calificación -->
+      <div id="ratingStars" style="display: flex; justify-content: center; gap: 5px;">
+        <i class="fas fa-star star" data-value="1"></i>
+        <i class="fas fa-star star" data-value="2"></i>
+        <i class="fas fa-star star" data-value="3"></i>
+        <i class="fas fa-star star" data-value="4"></i>
+        <i class="fas fa-star star" data-value="5"></i>
+      </div>
+
+      <button type="submit" style="background-color: #000; color: white; padding: 12px; border: none; border-radius: 12px; font-size: 16px; cursor: pointer; transition: background-color 0.3s ease;">
+        Enviar comentario
+      </button>
+    </form>
+  </div>
+</section>
+    
+    
+    
+    
+    
+    
+
+    <div class="titulo-pie">
+      <h4><b>Contáctanos</b></h4>
+    </div>
+    <footer class="contact-section">
+    
+    
+        <div class="contact-info row justify-content-center">
+          <div class="info-item col-12 col-md-4 mb-4 text-center">
+            <h4>Dirección</h4>
             <p>123 Calle Ficticia, Ciudad, País</p>
           </div>
-    
-          <div class="info-item">
-            <h3>Correo Electrónico</h3>
-            <p><a href="mailto:info@empresa.com">info@empresa.com</a></p>
+          <div class="info-item col-12 col-md-4 mb-4 text-center">
+            <h4>Correo Electrónico</h4>
+            <p><a href="mailto:info@empresa.com" class="text-decoration-none">info@empresa.com</a></p>
           </div>
-    
-          <div class="info-item">
-            <h3>Teléfono</h3>
+          <div class="info-item col-12 col-md-4 mb-4 text-center">
+            <h4>Teléfono</h4>
             <p>(+1) 234-567-890</p>
           </div>
         </div>
     
-        <div class="social-links">
-          <h3>Síguenos</h3>
-          <ul>
-            <li><a href="https://facebook.com/empresa" target="_blank">Facebook</a></li>
-            <li><a href="https://twitter.com/empresa" target="_blank">Twitter</a></li>
-            <li><a href="https://instagram.com/empresa" target="_blank">Instagram</a></li>
-            <li><a href="https://linkedin.com/company/empresa" target="_blank">LinkedIn</a></li>
-          </ul>
+        <div class="social-links text-center mt-4">
+          <h4 class="mb-3">Síguenos</h4>
+          <div class="d-flex justify-content-center gap-3">
+            <a href="https://facebook.com/empresa" target="_blank" class="social-icon"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://twitter.com/empresa" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com/empresa" target="_blank" class="social-icon"><i class="fab fa-instagram"></i></a>
+            <a href="https://linkedin.com/company/empresa" target="_blank" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+          </div>
+        </div>
+    
+        <div class="text-center mt-5 small text-muted">
+          © 2025 Empresa. Todos los derechos reservados.
         </div>
       </div>
-    </section>
+    </footer>
+    
+    
+    
 
  
     <!-- ***** HELP ***** -->
@@ -699,8 +897,8 @@ Compra de forma segura online o paga contra entrega al recibir tu producto. ¡T�
         nombre,
         precio,
         cantidad: 1,
-        precioOriginal: Math.round(precio * 1.4),
-        descuento: "Ahorra 40%"
+        precioOriginal: Math.round(precio * 1.43),
+        descuento: "Ahorra 30%"
       });
     }
 
@@ -881,27 +1079,7 @@ Compra de forma segura online o paga contra entrega al recibir tu producto. ¡T�
   }
 </script>
 
-<script>
-  const video = document.querySelector('.custom-video');
 
-  const observer = new IntersectionObserver(
-    (entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          video.play();
-        } else {
-          video.pause();
-          video.currentTime = 0;
-        }
-      });
-    },
-    {
-      threshold: 0.5 // Se reproduce cuando al menos el 50% es visible
-    }
-  );
-
-  observer.observe(video);
-</script>
   
 <script>
   // Cambiar selección de modelo
@@ -911,42 +1089,42 @@ Compra de forma segura online o paga contra entrega al recibir tu producto. ¡T�
   }
 
   function startCountdown(duration, display) {
-  // Verificamos si ya existe un tiempo de finalización en localStorage
-  let endTime = localStorage.getItem('endTime');
-
-  if (!endTime) {
-    // Si no existe, lo calculamos y lo guardamos
-    const now = Math.floor(Date.now() / 1000); // en segundos
-    endTime = now + duration;
-    localStorage.setItem('endTime', endTime);
-  } else {
-    endTime = parseInt(endTime);
-  }
-
-  const countdown = setInterval(function () {
-    const now = Math.floor(Date.now() / 1000); // en segundos
-    let timer = endTime - now;
-
-    if (timer < 0) {
-      clearInterval(countdown);
-      display.textContent = "Oferta finalizada";
-      return;
+    function setNewEndTime() {
+      const now = Math.floor(Date.now() / 1000); // tiempo actual en segundos
+      const newEndTime = now + duration;
+      localStorage.setItem('endTime', newEndTime);
+      return newEndTime;
     }
 
-    const hours = String(Math.floor(timer / 3600)).padStart(2, '0');
-    const minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
-    const seconds = String(timer % 60).padStart(2, '0');
+    let endTime = localStorage.getItem('endTime');
+    endTime = endTime ? parseInt(endTime) : setNewEndTime();
 
-    display.textContent = `${hours}:${minutes}:${seconds}`;
-  }, 1000);
-}
+    const countdown = setInterval(function () {
+      const now = Math.floor(Date.now() / 1000);
+      let timer = endTime - now;
+
+      if (timer < 0) {
+        // Reiniciar el contador
+        endTime = setNewEndTime();
+        timer = endTime - now;
+      }
+
+      const hours = String(Math.floor(timer / 3600)).padStart(2, '0');
+      const minutes = String(Math.floor((timer % 3600) / 60)).padStart(2, '0');
+      const seconds = String(timer % 60).padStart(2, '0');
+
+      display.textContent = `${hours}:${minutes}:${seconds}`;
+    }, 1000);
+  }
 
   window.onload = function () {
-    const threeHours = 3 * 60 * 60;
+    const fortyEightHours = 48 * 60 * 60; // 48 horas
     const display = document.getElementById('timer');
-    startCountdown(threeHours, display);
+    startCountdown(fortyEightHours, display);
   };
 </script>
+
+
 <script>
   const images = document.querySelectorAll('.carousel img');
   const thumbs = document.querySelectorAll('.carousel-thumbnails .thumb');
@@ -969,6 +1147,180 @@ Compra de forma segura online o paga contra entrega al recibir tu producto. ¡T�
 
   // Puedes dejar el automático si lo deseas
   setInterval(() => cambiarImagen(1), 6000);
+</script>
+
+<script>
+  document.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const text = document.querySelector('.features-text');
+    const image = document.querySelector('.features-image');
+  
+    if (text) {
+      text.style.transform = `translateY(${scrollY * 0.05}px)`;
+    }
+  
+    if (image) {
+      image.style.transform = `translateY(${scrollY * 0.03}px)`;
+    }
+  });
+  </script>
+  <script>
+    function scrollProducts(direction) {
+      const container = document.getElementById('productsContainer');
+      const scrollAmount = 300; // cantidad de píxeles a mover
+      container.scrollBy({ left: direction * scrollAmount, behavior: 'smooth' });
+    }
+    </script>
+
+  
+<script>
+  function guardarMetodoPago(elemento) {
+    const metodo = elemento.getAttribute('data-metodo');
+    if (metodo) {
+      localStorage.setItem('metodoPagoSeleccionado', metodo);
+    }
+  }
+</script>
+<script>
+  const form = document.getElementById('testimonialForm');
+  const carousel = document.getElementById('testimonialCarousel');
+  const dotsContainer = document.getElementById('testimonialDots');
+  const stars = document.querySelectorAll('#ratingStars .star');
+  let selectedRating = 5;
+
+  const testimonialSlides = document.querySelectorAll('.testimonial-slide');
+  const testimonialDots = document.querySelectorAll('.testimonial-dot');
+  let currentTestimonial = 0;
+  let testimonialInterval;
+
+  function showTestimonialSlide(index) {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    const dots = document.querySelectorAll('.testimonial-dot');
+    slides.forEach((slide, i) => {
+      slide.classList.remove('active');
+      if (dots[i]) dots[i].classList.remove('active');
+    });
+    if (slides[index]) slides[index].classList.add('active');
+    if (dots[index]) dots[index].classList.add('active');
+    currentTestimonial = index;
+  }
+
+  function nextTestimonialSlide() {
+    const slides = document.querySelectorAll('.testimonial-slide');
+    currentTestimonial = (currentTestimonial + 1) % slides.length;
+    showTestimonialSlide(currentTestimonial);
+  }
+
+  function startTestimonialInterval() {
+    testimonialInterval = setInterval(nextTestimonialSlide, 5000);
+  }
+
+  function stopTestimonialInterval() {
+    clearInterval(testimonialInterval);
+  }
+
+  // Dots clicables
+  dotsContainer.addEventListener('click', e => {
+    if (e.target.classList.contains('testimonial-dot')) {
+      const dots = Array.from(document.querySelectorAll('.testimonial-dot'));
+      const index = dots.indexOf(e.target);
+      stopTestimonialInterval();
+      showTestimonialSlide(index);
+      startTestimonialInterval();
+    }
+  });
+
+  // Estrellas
+  stars.forEach(star => {
+    star.addEventListener('click', () => {
+      selectedRating = parseInt(star.getAttribute('data-value'));
+      stars.forEach(s => s.classList.remove('selected'));
+      for (let i = 0; i < selectedRating; i++) {
+        stars[i].classList.add('selected');
+      }
+    });
+  });
+
+  // Manejar formulario
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    const nombre = document.getElementById('nombre').value.trim();
+    const comentario = document.getElementById('comentario').value.trim();
+    if (!nombre || !comentario) return;
+
+    const nuevaSlide = document.createElement('div');
+    nuevaSlide.classList.add('testimonial-slide');
+    const estrellasHTML = Array.from({ length: 5 }, (_, i) => {
+      return i < selectedRating ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+    }).join('');
+
+    nuevaSlide.innerHTML = `
+      <img src="assets/img/persona.png" alt="Perfil Usuario" class="testimonial-avatar"><br>
+      <div class="testimonial-rating">${estrellasHTML}</div>
+      <h3><b>${nombre}</b></h3>
+      <p>${comentario}</p>
+    `;
+
+    carousel.appendChild(nuevaSlide);
+
+    const newDot = document.createElement('span');
+    newDot.classList.add('testimonial-dot');
+    dotsContainer.appendChild(newDot);
+
+    // Guardar en localStorage
+    const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentarios.push({ nombre, comentario, rating: selectedRating });
+    localStorage.setItem('comentarios', JSON.stringify(comentarios));
+
+    form.reset();
+    selectedRating = 5;
+    stars.forEach(s => s.classList.remove('selected'));
+    for (let i = 0; i < selectedRating; i++) stars[i].classList.add('selected');
+
+    const newIndex = document.querySelectorAll('.testimonial-slide').length - 1;
+
+    stopTestimonialInterval(); // Detener auto-rotación
+    showTestimonialSlide(newIndex); // Mostrar nuevo comentario
+    startTestimonialInterval(); // Reiniciar auto-rotación
+  });
+
+  // Cargar comentarios desde localStorage al iniciar
+  window.addEventListener('DOMContentLoaded', () => {
+    const comentarios = JSON.parse(localStorage.getItem('comentarios')) || [];
+    comentarios.forEach(({ nombre, comentario, rating }) => {
+      const nuevaSlide = document.createElement('div');
+      nuevaSlide.classList.add('testimonial-slide');
+      const estrellasHTML = Array.from({ length: 5 }, (_, i) => {
+        return i < rating ? '<i class="fas fa-star"></i>' : '<i class="far fa-star"></i>';
+      }).join('');
+      nuevaSlide.innerHTML = `
+        <img src="assets/img/logo.png" alt="Perfil Usuario" class="testimonial-avatar"><br>
+        <div class="testimonial-rating">${estrellasHTML}</div>
+        <h3><b>${nombre}</b></h3>
+        <p>${comentario}</p>
+      `;
+      carousel.appendChild(nuevaSlide);
+
+      const newDot = document.createElement('span');
+      newDot.classList.add('testimonial-dot');
+      dotsContainer.appendChild(newDot);
+    });
+
+    // Iniciar carrusel
+    startTestimonialInterval();
+    showTestimonialSlide(0);
+  });
+</script>
+<script>
+  function buscarConEnter(event) {
+    if (event.key === "Enter") {
+      const query = document.getElementById("searchInput").value.trim();
+      if (query !== "") {
+        // Redirige a dedicated.html con el parámetro de búsqueda
+        window.location.href = `dedicated.html?search=${encodeURIComponent(query)}`;
+      }
+    }
+  }
 </script>
 
 </body>
